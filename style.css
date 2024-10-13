@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400..800&family=Exo:ital,wght@0,100..900;1,100..900&display=swap');
 
 * {
     margin: 0;
@@ -13,35 +13,50 @@ nav {
     height: 9vh;
 }
 
-nav div {
+nav .logo1 {
     display: flex;
     align-items: center;
-    /* justify-content: space-around; */
-    gap: 1vw;
+    justify-content: center;
+    gap: 0.2vw;
 }
 
-nav div span a {
+nav .logo1 span a {
     text-decoration: none;
     color: white;
+    font-family: "Baloo Bhai 2", sans-serif;
+    font-size: 20px;
 }
 
-nav ul {
+nav .logo1 {
     display: flex;
     gap: 2vw;
+}
+
+nav .menu{
+    display: flex;
+    gap: 2vw;
+}
+
+nav div ul{
+    display: flex;
+    gap: 2vw;
+    justify-content: center;
+    align-items: center;
 }
 
 nav ul li {
     list-style: none;
 }
 
-nav ul li a {
+nav div ul li a {
     color: rgb(255, 255, 255);
-    font-size: 17px;
+    font-size: 20px;
     text-decoration: none;
+    font-family: "Baloo Bhai 2", sans-serif;
 }
 
 div a img {
-    height: 4vh;
+    height: 5vh;
     margin-top: 0.4vh;
     border: 3px solid white;
     border-radius: 30px;
@@ -199,7 +214,7 @@ div.about2 .about {
     justify-content: center;
     align-items: center;
     margin-top: 10vh;
-    border: 6px solid blue;
+    border: 15px solid blue;
     margin-left: 25vw;
     margin-right: 25vw;
     gap: 5vw;
@@ -260,9 +275,9 @@ div.about2 .about {
 }
 
 .contact .map {
-    border: 2px solid blue;
+    border: 20px solid rgb(86, 86, 245);
     padding: 3px;
-    border-radius: 5px;
+    border-radius: 10px;
 }
 
 footer {
@@ -273,7 +288,7 @@ footer {
     margin-top: 20vh;
     border-top: 1px solid black;
     padding-top: 10vh;
-    background-color: rgb(159, 158, 158);
+    background-color: rgb(163, 163, 163);
 }
 
 footer .logo {
@@ -314,24 +329,31 @@ footer .follow .followlogo ul li a svg{
 }
 
 @media only screen and (max-width: 600px) {
-    nav div {
+    nav .logo1 {
         flex-direction: column;
-        margin-right: 8vw;
+        /* margin-right: 8vw; */
         margin-left: 2vw;
     }
 
     nav {
-        height: 9vh;
+        height: 11vh;
     }
 
-    nav ul {
-        gap: 0.5vw;
+    nav .menu{
+        flex-direction: column;
+        gap: 2vh;
     }
 
-    nav ul li a {
-        margin: 1vh 0vw;
-        padding: 1vh 0.3vw;
-        font-size: 14px;
+    nav .menu .ul1 {
+        gap: 24vw;
+    }
+
+    nav .menu .ul2{
+        gap: 11vw;
+    }
+
+    nav div ul li a {
+        font-size: 17px;
     }
 
     .head {
@@ -479,11 +501,12 @@ footer .follow .followlogo ul li a svg{
 
     footer {
         flex-direction: column;
+        margin-top: 10vh;
     }
 
     footer .follow .followlogo ul {
-        flex-direction: column;
-        gap: 1px;
+        /* flex-direction: column; */
+        gap: 30px;
     }
 
     footer .follow .followlogo ul li a svg{
