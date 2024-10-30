@@ -1,0 +1,680 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400..800&family=Exo:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    /* background-color:black; */
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(0, 0, 0);
+    height: 9vh;
+}
+
+nav .logo1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.2vw;
+}
+
+nav .logo1 span a {
+    text-decoration: none;
+    color: white;
+    font-family: "Baloo Bhai 2", sans-serif;
+    font-size: 20px;
+}
+
+nav .logo1 {
+    display: flex;
+    gap: 2vw;
+}
+
+nav .menu{
+    display: flex;
+    gap: 2vw;
+}
+
+nav div ul{
+    display: flex;
+    gap: 2vw;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav div ul li a {
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    text-decoration: none;
+    font-family: "Baloo Bhai 2", sans-serif;
+}
+
+div a img {
+    height: 5vh;
+    margin-top: 0.4vh;
+    border: 3px solid white;
+    border-radius: 30px;
+}
+
+.head {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-size: 2.3vw;
+    word-spacing: 0.4vw;
+    font-weight: bold;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+div h2{
+    font-size: 2.1rem;
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+
+.h1 {
+    display: flex;
+    justify-content: center;
+    margin-top: 10vh;
+    font-size: 2rem;
+    color: goldenrod;
+    font-weight: 600;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.h2 {
+    display: flex;
+    justify-content: center;
+    margin-top: 2vh;
+    font-size: 1.5rem;
+    color: goldenrod;
+    font-weight: 600;
+}
+
+.current1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2vh;
+}
+
+.current1 div svg{
+    color: #f4ac05;
+}
+
+.current1 :nth-child(2){
+    font-size: 1.1rem;
+}
+
+.current1 :nth-child(3){
+    font-size: 2rem;
+}
+
+.current2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2vh;
+}
+
+.current2 div svg {
+    color: #ff792b;
+}
+
+.current2 :nth-child(2){
+    font-size: 1.1rem;
+}
+
+.current2 :nth-child(3){
+    font-size: 2rem;
+}
+
+.currentwhole{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6vw;
+    margin-top: 7vh;
+    background-color: #6488EA;
+    padding: 1.5vw;
+    /* margin-left: 35vw;
+    margin-right: 35vw; */
+    width: 370px;
+    border-radius: 8px;
+}
+
+.currentwhole1{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 3vh;
+}
+
+.pt1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pt{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:3vw;
+    margin-top: 10vh;
+    background-color: #6488EA;
+    width: 95vw;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    border-radius: 8px;
+}
+
+.time{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2vh;
+}
+
+.time1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 8vh;
+}
+
+.time1 .text{
+    font-size: 1.1em;
+    letter-spacing: 0.1em;
+}
+
+.time2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 1vh;
+}
+
+.time2 .text{
+    font-size: 1.1em;
+    letter-spacing: 0.1em;
+}
+
+.january{
+    display: flex;
+    justify-content: center;
+    align-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    gap: 8vh;
+}
+
+.january div span{
+    font-size: 1.2em;
+}
+
+.february{
+    display: flex;
+    justify-content: center;
+    align-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    gap: 8vh;
+}
+
+.february div span{
+    font-size: 1.2em;
+}
+
+.march{
+    display: flex;
+    justify-content: center;
+    align-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    gap: 8vh;
+}
+
+.march div span{
+    font-size: 1.2em;
+}
+
+.april{
+    display: flex;
+    justify-content: center;
+    align-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    gap: 8vh;
+}
+
+.april div span{
+    font-size: 1.2em;
+}
+
+.may{
+    display: flex;
+    justify-content: center;
+    align-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    gap: 8vh;
+}
+
+.may div span{
+    font-size: 1.2em;
+}
+
+.june{
+    display: flex;
+    justify-content: center;
+    align-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    gap: 8vh;
+}
+
+.june div span{
+    font-size: 1.2em;
+}
+
+.july{
+    display: flex;
+    justify-content: center;
+    align-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    gap: 8vh;
+}
+
+.july div span{
+    font-size: 1.2em;
+}
+
+.august{
+    display: flex;
+    justify-content: center;
+    align-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    gap: 8vh;
+}
+
+.august div span{
+    font-size: 1.2em;
+}
+
+.september{
+    display: flex;
+    justify-content: center;
+    align-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    gap: 8vh;
+}
+
+.september div span{
+    font-size: 1.2em;
+}
+
+.october{
+    display: flex;
+    justify-content: center;
+    align-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    gap: 8vh;
+    background-color: rgba(56, 250, 185, 0.593); 
+        border-radius: 8px;
+    padding: 2vw 1vw 2vw 1vw;
+}
+
+.october div span{
+    font-size: 1.2em;
+}
+
+.november{
+    display: flex;
+    justify-content: center;
+    align-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    gap: 8vh;
+}
+
+.november div span{
+    font-size: 1.2em;
+}
+
+.december{
+    display: flex;
+    justify-content: center;
+    align-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    gap: 8vh;
+}
+
+.december div span{
+    font-size: 1.2em;
+}
+
+.aboutvideo {
+    display: flex;
+    justify-content: center;
+    gap: 10vw;
+    margin-top: 5vw;
+    align-items: center;
+}
+
+.aboutvideo div iframe {
+    border-radius: 10px;
+    padding: 20px;
+    background-color: rgb(226, 226, 226);
+    border-radius: 5px;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10vw;
+    margin-top: 20vh;
+    border-top: 1px solid black;
+    padding-top: 10vh;
+    background-color: rgb(163, 163, 163);
+}
+
+footer .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2vw;
+}
+
+footer .logo a img {
+    border: 3px solid black;
+    border-radius: 30px;
+}
+
+footer .logo a{
+    text-decoration: none;
+    font-size: 20px;
+}
+
+footer .follow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.1vh;
+}
+
+footer .follow .followhead {
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+footer .follow .followlogo ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    gap: 4vw;
+}
+
+footer .follow .followlogo ul li a i {
+    margin-top: 3vh;
+    margin-bottom: 7vh;
+    font-size: 40px;
+}
+
+@media only screen and (max-width: 1400px) {
+
+    nav .logo1 {
+        flex-direction: column;
+        /* margin-right: 8vw; */
+        margin-left: 2vw;
+        margin-top: 0.5vh;
+    }
+
+    nav {
+        height: 11vh;
+        gap: 16vw;
+    }
+
+    nav .menu{
+        margin-top: 0.5vh;
+        gap: 4vh;
+    }
+
+    nav div ul {
+        flex-direction: column;
+        align-items: start;
+        gap: 1.5vh;
+    }
+
+    /* nav div .ul1{
+        margin-right: 3vw;
+    }
+
+    nav div .ul2{
+        margin-left: 3vw;
+    } */
+
+    /* nav .menu .ul1 {
+        gap: 24vw;
+    }
+
+    nav .menu .ul2{
+        gap: 11vw;
+    } */
+
+    nav div ul li a {
+        font-size: 14px;
+        /* word-wrap: break-word; */
+    }
+
+    .head h2{
+        font-size: 1.2rem;
+    }
+    .head {
+        font-size: 1.3rem;
+        margin-bottom: 40px;
+        margin-top: 30px;
+        word-spacing: 0.6vw;
+    }
+
+    .h1{
+        margin-top: 10vh;
+    }
+    .currentwhole {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 6vw;
+        margin-top: 7vh;
+        background-color: #6488EA;
+        padding: 4.5vw;
+        width: 260px;
+        border-radius: 8px;
+    }
+    .h1{
+        font-size: 1.3rem;
+    }
+    .h2{
+        font-size: 1rem;
+    }
+    .pt{
+        flex-direction: column;
+        gap: 2.5vh;
+    }
+    .time{
+        flex-direction: row;
+        gap: 5vw;
+        margin-left: 25vw;
+    }
+    .time1{
+        margin-top: 1vh;
+    }
+    /* .time2{
+        flex-direction: row;
+    } */
+    .january{
+        flex-direction: row;
+        gap: 10vw;
+        border: 0.5px solid black;
+        padding: 10px 35px ;
+    }
+    .january div span{
+        text-align: center;
+    }
+    .february{
+        flex-direction: row;
+        gap: 10vw;
+        border: 0.5px solid black;
+        padding: 10px 25px ;
+    }
+    .february div .febmor{
+        text-align: center;
+    }
+    .february div .febeve{
+        margin-right: 2.5vw;
+        text-align: center;
+    }
+    .march{
+        flex-direction: row;
+        gap: 10vw;
+        border: 0.5px solid black;
+        padding: 10px 37px ;
+    }
+    .march div .marmor{
+        margin-left: 1.7vw;
+    }
+    .april{
+        flex-direction: row;
+        gap: 10vw;
+        border: 0.5px solid black;
+        padding: 10px 38px ;
+    }
+    .april div .aprmor{
+        margin-left: 3.5vw;
+    }
+    .may{
+        flex-direction: row;
+        gap: 10vw;
+        border: 0.5px solid black;
+        padding: 10px 38px ;
+    }
+    .may div .maymor{
+        margin-left: 4.5vw;
+    }
+    .june{
+        flex-direction: row;
+        gap: 10vw;
+        border: 0.5px solid black;
+        padding: 10px 38px ;
+    }
+    .june div .junemor{
+        margin-left: 4.5vw;
+    }
+    .july{
+        flex-direction: row;
+        gap: 10vw;
+        border: 0.5px solid black;
+        padding: 10px 38px ;
+    }
+    .july div .julymor{
+        margin-left: 5.5vw;
+    }
+    .august{
+        flex-direction: row;
+        gap: 11vw;
+        border: 0.5px solid black;
+        padding: 10px 29px ;
+    }
+    .august div .augeve{
+        margin-right: 2vw;
+    }
+    .september{
+        flex-direction: row;
+        gap: 10vw;
+        border: 0.5px solid black;
+        padding: 10px 11px ;
+    }
+    .september div .septeve{
+        margin-right: 6.5vw;
+    }
+    .october{
+        flex-direction: row;
+        gap: 10vw;
+        padding: 2vw 5vw 2vw 5vw;
+        background-color: aquamarine; 
+        border-radius: 8px;
+        border: 0.5px solid black;
+        padding: 10px 33px ;
+    }
+    .october div .octoeve{
+        margin-right: 1vw;
+    }
+    .november{
+        flex-direction: row;
+        gap: 10vw;
+        border: 0.5px solid black;
+        padding: 10px 13px ;
+    }
+    .november div .noveve{
+        margin-right: 5vw;
+    }
+    .december{
+        flex-direction: row;
+        gap: 10vw;
+        border: 0.5px solid black;
+        padding: 10px 13px ;
+    }
+    .december div .deceve{
+        margin-right: 5vw;
+    }
+    .aboutvideo {
+        flex-direction: column;
+        margin-top: 6vh;
+        gap: 5vh;
+    }
+
+    .aboutvideo div iframe {
+        width: 60vw;
+    }
+
+    footer {
+        flex-direction: column;
+        margin-top: 10vh;
+    }
+
+    footer .follow .followlogo ul {
+        /* flex-direction: column; */
+        gap: 30px;
+    }
+
+    footer .follow .followlogo ul li a svg{
+        width: 7vw;
+    }
+
+    footer .logo a img{
+        width: 5vh;
+        height: 5vh;
+    }
+}

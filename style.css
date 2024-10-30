@@ -5,6 +5,7 @@
     padding: 0;
 }
 
+
 nav {
     display: flex;
     justify-content: space-around;
@@ -77,14 +78,14 @@ div a img {
     margin-left: 15vw;
     margin-top: 5vh;
     margin-bottom: 5vh;
-
 }
+
 
 .quote {
     text-align: center;
     font-weight: bold;
     word-spacing: 0.5vw;
-    font-size: 1.7vw;
+    font-size: 1.5rem;
     margin-top: 8vh;
     line-height: 7vh;
     font-family: "Baloo 2", sans-serif;
@@ -222,9 +223,10 @@ div.about2 .about {
     border-radius: 5px;
 }
 
-.event div img{
-    width: 25vw;
-    border-radius: 5px ;
+.event div img {
+    width: 19vw;
+    height: 55vh;
+    border-radius: 5px;
 }
 
 .event .aboutevent {
@@ -235,12 +237,12 @@ div.about2 .about {
     gap: 3vw;
 }
 
-.event .aboutevent div{
+.event .aboutevent div {
     line-height: 5vh;
-    font-size: 20px;
+    font-size: 18px;
     text-align: center;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    letter-spacing: 0.2vw;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    letter-spacing: 0.1vw;
 }
 
 .contact {
@@ -268,6 +270,7 @@ div.about2 .about {
 .contact .info .email {
     font-size: 25px;
 }
+
 .contact .info .address {
     text-align: center;
     line-height: 5vh;
@@ -298,19 +301,24 @@ footer .logo {
     gap: 2vw;
 }
 
-footer .logo a img{
+footer .logo a img {
     border: 3px solid black;
     border-radius: 30px;
 }
 
-footer .follow{
+footer .logo a{
+    text-decoration: none;
+    font-size: 20px;
+}
+
+footer .follow {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 0.1vh;
 }
 
-footer .follow .followhead{
+footer .follow .followhead {
     font-size: 20px;
     font-weight: bold;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -324,8 +332,10 @@ footer .follow .followlogo ul {
     gap: 4vw;
 }
 
-footer .follow .followlogo ul li a svg{
-    width: 3vw;
+footer .follow .followlogo ul li a i {
+    margin-top: 3vh;
+    margin-bottom: 7vh;
+    font-size: 40px;
 }
 
 @media only screen and (max-width: 600px) {
@@ -333,31 +343,48 @@ footer .follow .followlogo ul li a svg{
         flex-direction: column;
         /* margin-right: 8vw; */
         margin-left: 2vw;
+        margin-top: 0.5vh;
     }
 
     nav {
         height: 11vh;
+        gap: 16vw;
     }
 
     nav .menu{
-        flex-direction: column;
-        gap: 2vh;
+        margin-top: 0.5vh;
+        gap: 4vh;
     }
 
-    nav .menu .ul1 {
+    nav div ul {
+        flex-direction: column;
+        align-items: start;
+        gap: 1.5vh;
+    }
+
+    /* nav div .ul1{
+        margin-right: 3vw;
+    }
+
+    nav div .ul2{
+        margin-left: 3vw;
+    } */
+
+    /* nav .menu .ul1 {
         gap: 24vw;
     }
 
     nav .menu .ul2{
         gap: 11vw;
-    }
+    } */
 
     nav div ul li a {
-        font-size: 17px;
+        font-size: 14px;
+        /* word-wrap: break-word; */
     }
 
     .head {
-        font-size: 2.5vh;
+        font-size: 1.3rem;
         margin-bottom: 40px;
         margin-top: 30px;
         word-spacing: 0.6vw;
@@ -369,9 +396,8 @@ footer .follow .followlogo ul li a svg{
     }
 
     .quote {
-        font-size: 3vw;
+        font-size: 1rem;
         margin-top: 3vh;
-        font-size: 3vw;
     }
 
     .quote div:nth-child(2) {
@@ -402,7 +428,7 @@ footer .follow .followlogo ul li a svg{
         width: 27vw;
     }
 
-    .pt .ptvid .mor .morhead{
+    .pt .ptvid .mor .morhead {
         text-align: center;
     }
 
@@ -413,10 +439,11 @@ footer .follow .followlogo ul li a svg{
     .pt .ptvid .eve {
         width: 27vw;
     }
-    
-    .pt .ptvid .eve .evehead{
+
+    .pt .ptvid .eve .evehead {
         text-align: center;
     }
+
     .pt .ptvid .eve iframe {
         width: 27vw;
     }
@@ -462,8 +489,9 @@ footer .follow .followlogo ul li a svg{
         width: 50vw;
     }
 
-    .event div img{
+    .event div img {
         width: 50vw;
+        height: 33vh;
     }
 
     .contact {
@@ -471,25 +499,26 @@ footer .follow .followlogo ul li a svg{
         margin-top: 2vh;
     }
 
-    .contact .map{
+    .contact .map {
         width: 60vw;
     }
 
-    .contact .map iframe{
+    .contact .map iframe {
         width: 60vw;
         height: 20vh;
     }
 
-    .contact .info .number{
-        font-size: 23px;
+    .contact .info .number {
+        font-size: 13px;
     }
+
     .contact .info {
         gap: 1.8vh;
     }
 
-    .contact .info .email{
-       font-size: 20px;
-       font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    .contact .info .email {
+        font-size: 20px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     }
 
     .contact .info .address {
@@ -509,7 +538,7 @@ footer .follow .followlogo ul li a svg{
         gap: 30px;
     }
 
-    footer .follow .followlogo ul li a svg{
+    footer .follow .followlogo ul li a svg {
         width: 7vw;
     }
 }
