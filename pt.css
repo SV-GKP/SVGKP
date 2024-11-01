@@ -18,7 +18,7 @@ nav .logo1 {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 0.2vw;
+    gap: 2vw;
 }
 
 nav .logo1 span a {
@@ -26,11 +26,6 @@ nav .logo1 span a {
     color: white;
     font-family: "Baloo Bhai 2", sans-serif;
     font-size: 20px;
-}
-
-nav .logo1 {
-    display: flex;
-    gap: 2vw;
 }
 
 nav .menu{
@@ -481,13 +476,13 @@ footer .follow .followlogo ul li a i {
     color: white;
 }
 
-@media only screen and (max-width: 1400px) {
-
+@media only screen and (max-width: 600px){
     nav .logo1 {
         flex-direction: column;
         /* margin-right: 8vw; */
         margin-left: 2vw;
         margin-top: 0.5vh;
+        gap: 0.1vh;
     }
 
     nav {
@@ -527,6 +522,30 @@ footer .follow .followlogo ul li a i {
         /* word-wrap: break-word; */
     }
 
+    footer {
+        flex-direction: column;
+        margin-top: 10vh;
+    }
+
+    footer .follow .followlogo ul {
+        /* flex-direction: column; */
+        gap: 30px;
+    }
+
+    footer .follow .followlogo ul li a svg{
+        width: 7vw;
+    }
+
+    footer .logo a img{
+        width: 5vh;
+        height: 5vh;
+    }
+}
+
+@media only screen and (max-width: 1400px) {
+
+
+
     .head h2{
         font-size: 1.2rem;
     }
@@ -544,11 +563,11 @@ footer .follow .followlogo ul li a i {
         display: flex;
         justify-content: center;
         align-items: center;
-        gap: 6vw;
+        gap: 10vw;
         margin-top: 7vh;
         background-color: #000000;
         padding: 4.5vw;
-        width: 260px;
+        width: 270px;
         border-radius: 8px;
     }
     .h1{
@@ -733,22 +752,5 @@ footer .follow .followlogo ul li a i {
         width: 60vw;
     }
 
-    footer {
-        flex-direction: column;
-        margin-top: 10vh;
-    }
-
-    footer .follow .followlogo ul {
-        /* flex-direction: column; */
-        gap: 30px;
-    }
-
-    footer .follow .followlogo ul li a svg{
-        width: 7vw;
-    }
-
-    footer .logo a img{
-        width: 5vh;
-        height: 5vh;
-    }
+    
 }

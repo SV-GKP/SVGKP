@@ -19,7 +19,7 @@ nav .logo1 {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 0.2vw;
+    gap: 2vw;
 }
 
 nav .logo1 span a {
@@ -27,11 +27,6 @@ nav .logo1 span a {
     color: white;
     font-family: "Baloo Bhai 2", sans-serif;
     font-size: 20px;
-}
-
-nav .logo1 {
-    display: flex;
-    gap: 2vw;
 }
 
 nav .menu{
@@ -407,6 +402,7 @@ footer .follow .followlogo ul li a i {
         /* margin-right: 8vw; */
         margin-left: 2vw;
         margin-top: 0.5vh;
+        gap: 0.1vh;
     }
 
     nav {
@@ -514,6 +510,20 @@ footer .follow .followlogo ul li a i {
         width: 55vw;
         height: 15vh;
     }
+
+    footer {
+        flex-direction: column;
+        margin-top: 10vh;
+    }
+
+    footer .follow .followlogo ul {
+        /* flex-direction: column; */
+        gap: 30px;
+    }
+
+    footer .follow .followlogo ul li a svg {
+        width: 7vw;
+    }
 }
 
 @media only screen and (max-width: 1100px) {
@@ -523,9 +533,10 @@ footer .follow .followlogo ul li a i {
     }
 
     .about2 div img {
-        height: 25vh;
-        width: 50vw;
+        height: 280px;
+        width: 250px;
         border-radius: 40px;
+        margin-top: 5vh;
     }
 
     div.about2 .about {
@@ -533,6 +544,7 @@ footer .follow .followlogo ul li a i {
         text-align: justify;
         line-height: 4vh;
         font-size: 16px;
+        margin-top: 2vh;
     }
 
     .aboutvideo {
@@ -566,7 +578,7 @@ footer .follow .followlogo ul li a i {
     }
 
     .event div img {
-        width: 230px;
+        width: 250px;
         height: 330px;
     }
 
@@ -587,6 +599,7 @@ footer .follow .followlogo ul li a i {
     .contact .info .number {
         font-size: 20px;
         gap: 3vw;
+        margin-right: 5vw;
     }
 
 
@@ -599,6 +612,7 @@ footer .follow .followlogo ul li a i {
         font-size: 20px;
         font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
         gap: 3vw;
+        margin-right: 5vw;
     }
 
     .contact .info .email i{
@@ -613,17 +627,5 @@ footer .follow .followlogo ul li a i {
         font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     }
 
-    footer {
-        flex-direction: column;
-        margin-top: 10vh;
-    }
-
-    footer .follow .followlogo ul {
-        /* flex-direction: column; */
-        gap: 30px;
-    }
-
-    footer .follow .followlogo ul li a svg {
-        width: 7vw;
-    }
+   
 }
