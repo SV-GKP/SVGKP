@@ -331,6 +331,10 @@ div.about2 .about {
     margin-top: 0.5vh;
 }
 
+.address span a {
+    text-decoration: none;
+}
+
 .contact .map div{
     background-color: #e4b784;
     padding: 3px;
