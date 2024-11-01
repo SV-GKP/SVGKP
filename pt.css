@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400..800&family=Exo:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400..800&family=Exo:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@400..900&display=swap');
 
 * {
     margin: 0;
@@ -76,6 +76,8 @@ div a img {
 div h2{
     font-size: 2.1rem;
     text-align: center;
+    color: #e4b784;
+    background-color: #000000;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
@@ -112,11 +114,21 @@ div h2{
 }
 
 .current1 :nth-child(2){
-    font-size: 1.1rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 0.1vw;
+    color: #e4b784;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .current1 :nth-child(3){
     font-size: 2rem;
+    color: white;
+    letter-spacing: 0.1vw;
+    font-family: "Orbitron", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
 }
 
 .current2 {
@@ -132,11 +144,21 @@ div h2{
 }
 
 .current2 :nth-child(2){
-    font-size: 1.1rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 0.1vw;
+    color: #e4b784;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .current2 :nth-child(3){
     font-size: 2rem;
+    color: white;
+    letter-spacing: 0.1vw;
+    font-family: "Orbitron", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
 }
 
 .currentwhole{
@@ -145,7 +167,7 @@ div h2{
     align-items: center;
     gap: 6vw;
     margin-top: 7vh;
-    background-color: #6488EA;
+    background-color: #000000;
     padding: 1.5vw;
     /* margin-left: 35vw;
     margin-right: 35vw; */
@@ -173,8 +195,8 @@ div h2{
     align-items: center;
     gap:3vw;
     margin-top: 10vh;
-    background-color: #6488EA;
-    width: 95vw;
+    background-color: #000000;
+    width: 93vw;
     padding-top: 2vh;
     padding-bottom: 2vh;
     border-radius: 8px;
@@ -197,8 +219,9 @@ div h2{
 }
 
 .time1 .text{
-    font-size: 1.1em;
+    font-size: 1.2em;
     letter-spacing: 0.1em;
+    color: white;
 }
 
 .time2 {
@@ -210,8 +233,9 @@ div h2{
 }
 
 .time2 .text{
-    font-size: 1.1em;
+    font-size: 1.2em;
     letter-spacing: 0.1em;
+    color: white;
 }
 
 .january{
@@ -221,6 +245,7 @@ div h2{
     align-items: center;
     flex-direction: column;
     gap: 8vh;
+    color: white;
 }
 
 .january div span{
@@ -234,6 +259,7 @@ div h2{
     align-items: center;
     flex-direction: column;
     gap: 8vh;
+    color: white;
 }
 
 .february div span{
@@ -247,6 +273,7 @@ div h2{
     align-items: center;
     flex-direction: column;
     gap: 8vh;
+    color: white;
 }
 
 .march div span{
@@ -260,6 +287,7 @@ div h2{
     align-items: center;
     flex-direction: column;
     gap: 8vh;
+    color: white;
 }
 
 .april div span{
@@ -273,6 +301,7 @@ div h2{
     align-items: center;
     flex-direction: column;
     gap: 8vh;
+    color: white;
 }
 
 .may div span{
@@ -286,6 +315,7 @@ div h2{
     align-items: center;
     flex-direction: column;
     gap: 8vh;
+    color: white;
 }
 
 .june div span{
@@ -299,6 +329,7 @@ div h2{
     align-items: center;
     flex-direction: column;
     gap: 8vh;
+    color: white;
 }
 
 .july div span{
@@ -312,6 +343,7 @@ div h2{
     align-items: center;
     flex-direction: column;
     gap: 8vh;
+    color: white;
 }
 
 .august div span{
@@ -325,6 +357,7 @@ div h2{
     align-items: center;
     flex-direction: column;
     gap: 8vh;
+    color: white;
 }
 
 .september div span{
@@ -338,9 +371,7 @@ div h2{
     align-items: center;
     flex-direction: column;
     gap: 8vh;
-    background-color: rgba(56, 250, 185, 0.593); 
-        border-radius: 8px;
-    padding: 2vw 1vw 2vw 1vw;
+    color: white;
 }
 
 .october div span{
@@ -354,6 +385,10 @@ div h2{
     align-items: center;
     flex-direction: column;
     gap: 8vh;
+    background-color: #1f1f1f; 
+        border-radius: 8px;
+        color: #e4b784;
+    padding: 2vw 1vw 2vw 1vw;
 }
 
 .november div span{
@@ -367,6 +402,7 @@ div h2{
     align-items: center;
     flex-direction: column;
     gap: 8vh;
+    color: white;
 }
 
 .december div span{
@@ -382,10 +418,9 @@ div h2{
 }
 
 .aboutvideo div iframe {
-    border-radius: 10px;
     padding: 20px;
-    background-color: rgb(226, 226, 226);
-    border-radius: 5px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 8px;
 }
 
 footer {
@@ -396,7 +431,7 @@ footer {
     margin-top: 20vh;
     border-top: 1px solid black;
     padding-top: 10vh;
-    background-color: rgb(163, 163, 163);
+    background-color: rgb(0, 0, 0);
 }
 
 footer .logo {
@@ -407,13 +442,14 @@ footer .logo {
 }
 
 footer .logo a img {
-    border: 3px solid black;
+    border: 3px solid rgb(255, 255, 255);
     border-radius: 30px;
 }
 
 footer .logo a{
     text-decoration: none;
-    font-size: 20px;
+    font-size: 25px;
+    color: #e4b784;
 }
 
 footer .follow {
@@ -424,8 +460,9 @@ footer .follow {
 }
 
 footer .follow .followhead {
-    font-size: 20px;
+    font-size: 25px;
     font-weight: bold;
+    color: #e4b784;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
@@ -441,6 +478,7 @@ footer .follow .followlogo ul li a i {
     margin-top: 3vh;
     margin-bottom: 7vh;
     font-size: 40px;
+    color: white;
 }
 
 @media only screen and (max-width: 1400px) {
@@ -508,7 +546,7 @@ footer .follow .followlogo ul li a i {
         align-items: center;
         gap: 6vw;
         margin-top: 7vh;
-        background-color: #6488EA;
+        background-color: #000000;
         padding: 4.5vw;
         width: 260px;
         border-radius: 8px;
@@ -522,11 +560,11 @@ footer .follow .followlogo ul li a i {
     .pt{
         flex-direction: column;
         gap: 2.5vh;
+        width: 350px;
     }
     .time{
         flex-direction: row;
-        gap: 5vw;
-        margin-left: 25vw;
+        margin-left: 110px;
     }
     .time1{
         margin-top: 1vh;
@@ -536,118 +574,154 @@ footer .follow .followlogo ul li a i {
     } */
     .january{
         flex-direction: row;
-        gap: 10vw;
-        border: 0.5px solid black;
+        border: 0.5px solid #e4b784;
         padding: 10px 35px ;
+        gap: 40px;
+        width: 230px;
+        border-radius: 8px;
     }
     .january div span{
         text-align: center;
     }
     .february{
         flex-direction: row;
-        gap: 10vw;
-        border: 0.5px solid black;
-        padding: 10px 25px ;
+        border: 0.5px solid #e4b784;
+        padding: 10px 35px ;
+        gap: 40px;
+        width: 230px;
+        border-radius: 8px;
     }
     .february div .febmor{
         text-align: center;
     }
     .february div .febeve{
-        margin-right: 2.5vw;
+        margin-right: 10px;
         text-align: center;
+    }
+    .february div .febabt{
+        /* margin-left: ; */
     }
     .march{
         flex-direction: row;
         gap: 10vw;
-        border: 0.5px solid black;
-        padding: 10px 37px ;
+        border: 0.5px solid #e4b784;
+        padding: 10px 35px ;
+        gap: 40px;
+        width: 230px;
+        border-radius: 8px;
     }
     .march div .marmor{
-        margin-left: 1.7vw;
+        margin-left: 10px;
     }
     .april{
         flex-direction: row;
         gap: 10vw;
-        border: 0.5px solid black;
-        padding: 10px 38px ;
+        border: 0.5px solid #e4b784;
+        padding: 10px 35px ;
+        gap: 40px;
+        width: 230px;
+        border-radius: 8px;
     }
     .april div .aprmor{
-        margin-left: 3.5vw;
+        margin-left: 20px;
     }
     .may{
         flex-direction: row;
         gap: 10vw;
-        border: 0.5px solid black;
-        padding: 10px 38px ;
+        border: 0.5px solid #e4b784;
+        padding: 10px 35px ;
+        gap: 40px;
+        width: 230px;
+        border-radius: 8px;
     }
     .may div .maymor{
-        margin-left: 4.5vw;
+        margin-left: 25px;
     }
     .june{
         flex-direction: row;
         gap: 10vw;
-        border: 0.5px solid black;
-        padding: 10px 38px ;
+        border: 0.5px solid #e4b784;
+        padding: 10px 35px ;
+        gap: 40px;
+        width: 230px;
+        border-radius: 8px;
     }
     .june div .junemor{
-        margin-left: 4.5vw;
+        margin-left: 25px;
     }
     .july{
         flex-direction: row;
         gap: 10vw;
-        border: 0.5px solid black;
-        padding: 10px 38px ;
+        border: 0.5px solid #e4b784;
+        padding: 10px 35px ;
+        gap: 40px;
+        width: 230px;
+        border-radius: 8px;
     }
     .july div .julymor{
-        margin-left: 5.5vw;
+        margin-left: 30px;
     }
     .august{
         flex-direction: row;
         gap: 11vw;
-        border: 0.5px solid black;
-        padding: 10px 29px ;
+        border: 0.5px solid #e4b784;
+        padding: 10px 35px ;
+        gap: 40px;
+        width: 230px;
+        border-radius: 8px;
     }
-    .august div .augeve{
-        margin-right: 2vw;
+    .august div .augmor{
+        margin-left: 8px;
     }
     .september{
         flex-direction: row;
         gap: 10vw;
-        border: 0.5px solid black;
-        padding: 10px 11px ;
+        border: 0.5px solid #e4b784;
+        padding: 10px 35px ;
+        gap: 40px;
+        width: 230px;
+        border-radius: 8px;
     }
     .september div .septeve{
-        margin-right: 6.5vw;
+        margin-right: 20px;
     }
     .october{
         flex-direction: row;
         gap: 10vw;
         padding: 2vw 5vw 2vw 5vw;
-        background-color: aquamarine; 
+        border: 0.5px solid #e4b784;
         border-radius: 8px;
-        border: 0.5px solid black;
-        padding: 10px 33px ;
+        padding: 10px 35px ;
+        gap: 40px;
+        width: 230px;
     }
     .october div .octoeve{
-        margin-right: 1vw;
+        /* margin-right: ; */
     }
     .november{
         flex-direction: row;
         gap: 10vw;
+        padding: 2vw 5vw 2vw 5vw;
+        background-color: #1f1f1f;
         border: 0.5px solid black;
-        padding: 10px 13px ;
+        padding: 10px 35px ;
+        gap: 40px;
+        width: 230px;
     }
     .november div .noveve{
-        margin-right: 5vw;
+        margin-right: 20px;
     }
     .december{
         flex-direction: row;
         gap: 10vw;
-        border: 0.5px solid black;
-        padding: 10px 13px ;
+        border: 0.5px solid #e4b784;
+        padding: 10px 35px ;
+        gap: 40px;
+        width: 230px;
+        border-radius: 8px;
     }
     .december div .deceve{
-        margin-right: 5vw;
+        margin-right: 18px;
     }
     .aboutvideo {
         flex-direction: column;
