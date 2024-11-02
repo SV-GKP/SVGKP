@@ -636,10 +636,15 @@ footer .follow .followlogo ul li a i {
         flex-direction: column;
         margin-top: 6vh;
         align-items: center;
+        margin-left: 0;
+        width: 5rem;
     }
 
-    .cotatact .info{
-        
+    .contact1{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
     .contact .map div {
@@ -653,9 +658,9 @@ footer .follow .followlogo ul li a i {
 
 
     .contact .info .number {
-        font-size: 18px;
+        font-size: 17px;
         gap: 3vw;
-        margin-right: 10vw;
+        /* margin-right: 10vw; */
     }
 
     .contact .info .number i{
@@ -664,16 +669,16 @@ footer .follow .followlogo ul li a i {
 
     .contact .info {
         gap: 1.8vh;
-        width: 24rem;
-        margin-right: 5vw;
+        width: 20rem;
+        /* margin-right: 13vw; */
         
     }
 
     .contact .info .email {
-        font-size: 20px;
+        font-size: 17px;
         font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
         gap: 3vw;
-        margin-right: 10vw;
+        /* margin-right: 10vw; */
     }
 
     .contact .info .email i{
@@ -683,7 +688,7 @@ footer .follow .followlogo ul li a i {
     .contact .info .address {
         width: 22rem;
         line-height: 3.5vh;
-        font-size: 20px;
+        font-size: 17px;
         gap: 3vw;
         font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     }
