@@ -492,14 +492,15 @@ footer .follow .followlogo ul li a i {
         margin: 0;
     }
 
-    .quote {
-        font-size: 1rem;
+    .quote1 {
+        font-size: 0.75rem;
         margin-top: 3vh;
     }
 
     .quote div:nth-child(2) {
         margin-top: -2vh;
         margin-left: 15vw;
+        font-size: 0.5rem;
     }
 
 
