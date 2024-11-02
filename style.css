@@ -7,6 +7,7 @@
 }
 
 
+
 nav {
     display: flex;
     justify-content: space-around;
@@ -68,11 +69,11 @@ div a img {
     text-align: center;
     margin-top: 30px;
     margin-bottom: 20px;
-    font-size: 2.3vw;
+    font-size: 2.3rem;
     word-spacing: 0.4vw;
     font-weight: bold;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    margin-top: 100px;
+    margin-top: 8rem;
 }
 
 .banner img {
@@ -257,7 +258,7 @@ div.about2 .about {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 10vh;
+    margin-top: 5vh;
     border: 15px solid rgb(0, 0, 0);
     margin-left: 25vw;
     margin-right: 25vw;
@@ -300,11 +301,11 @@ div.about2 .about {
 }
 
 .contact .info {
-    width: 25vw;
+    width: 30vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    /* align-items: center; */
     gap: 4vh;
 }
 
@@ -359,7 +360,7 @@ div.about2 .about {
     font-size: 25px;
     display: flex;
     gap: 1vw;
-    margin-left: 2vw;
+    /* margin-left: 2vw; */
 }
 
 .contact .info .address span a:hover{
@@ -634,6 +635,11 @@ footer .follow .followlogo ul li a i {
     .contact {
         flex-direction: column;
         margin-top: 6vh;
+        align-items: center;
+    }
+
+    .cotatact .info{
+        
     }
 
     .contact .map div {
@@ -658,6 +664,8 @@ footer .follow .followlogo ul li a i {
 
     .contact .info {
         gap: 1.8vh;
+        width: 24rem;
+        
     }
 
     .contact .info .email {
@@ -672,9 +680,9 @@ footer .follow .followlogo ul li a i {
     }
 
     .contact .info .address {
-        width: 60vw;
+        width: 22rem;
         line-height: 3.5vh;
-        font-size: 23px;
+        font-size: 20px;
         gap: 3vw;
         font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     }
