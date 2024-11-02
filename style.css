@@ -81,7 +81,7 @@ div a img {
     text-align: center;
     font-weight: bold;
     word-spacing: 0.5vw;
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     margin-top: 8vh;
     line-height: 7vh;
     font-family: "Baloo 2", sans-serif;
@@ -89,7 +89,8 @@ div a img {
 
 .quote div:nth-child(2) {
     margin-left: 38vw;
-    font-size: 1.1em;
+    font-size: 0.9em;
+    word-spacing: 0.2em;
 }
 
 .about1 {
@@ -266,7 +267,7 @@ div.about2 .about {
 }
 
 .event .aboutevent {
-    width: 15vw;
+    width: 16vw;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -308,6 +309,21 @@ div.about2 .about {
     font-weight: bold;
 }
 
+.contact .info .number i{
+    color: green;
+    font-size: 35px;
+    
+}
+
+.contact .info .number a{
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.contact .info .number a:hover{
+    text-decoration: underline;
+}
+
 .contact .info .email {
     font-size: 25px;
     display: flex;
@@ -315,8 +331,19 @@ div.about2 .about {
     gap: 1vw;
 }
 
+.contact .info .email a{
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.contact .info .email a:hover{
+    text-decoration: underline;
+}
+
 .contact .info .email i{
     margin-top: 0.5vh;
+    color: red;
+    font-size: 25px;
 }
 
 .contact .info .address {
@@ -325,14 +352,21 @@ div.about2 .about {
     font-size: 25px;
     display: flex;
     gap: 1vw;
+    margin-left: 2vw;
+}
+
+.contact .info .address span a:hover{
+    text-decoration: underline;
 }
 
 .contact .info .address i{
     margin-top: 0.5vh;
+    color: blue;
 }
 
 .address span a {
     text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .contact .map div{
@@ -479,7 +513,7 @@ footer .follow .followlogo ul li a i {
     }
 
     .pt .ptvid {
-        gap: 2vh;
+        gap: 3vh;
         flex-direction: column;
     }
 
@@ -494,6 +528,7 @@ footer .follow .followlogo ul li a i {
 
     .pt .ptvid .mor .morhead {
         text-align: center;
+
     }
 
     .pt .ptvid .mor div iframe {
@@ -578,7 +613,7 @@ footer .follow .followlogo ul li a i {
     }
 
     .event .aboutevent {
-        width: 50vw;
+        width: 55vw;
     }
 
     .event div img {
@@ -600,13 +635,16 @@ footer .follow .followlogo ul li a i {
         height: 20vh;
     }
 
+
     .contact .info .number {
         font-size: 20px;
         gap: 3vw;
-        margin-right: 5vw;
+        margin-right: 10vw;
     }
 
-
+    .contact .info .number i{
+        font-size: 25px;
+    }
 
     .contact .info {
         gap: 1.8vh;
@@ -616,7 +654,7 @@ footer .follow .followlogo ul li a i {
         font-size: 20px;
         font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
         gap: 3vw;
-        margin-right: 5vw;
+        margin-right: 10vw;
     }
 
     .contact .info .email i{

@@ -104,8 +104,8 @@ div h2{
     gap: 2vh;
 }
 
-.current1 div svg{
-    color: #f4ac05;
+.current1 div img{
+    width: 5.2rem;
 }
 
 .current1 :nth-child(2){
@@ -134,8 +134,8 @@ div h2{
     gap: 2vh;
 }
 
-.current2 div svg {
-    color: #ff792b;
+.current2 div img {
+    width: 5.2rem;
 }
 
 .current2 :nth-child(2){
