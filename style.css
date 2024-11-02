@@ -13,6 +13,11 @@ nav {
     align-items: center;
     background-color: rgb(0, 0, 0);
     height: 9vh;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.395);
 }
 
 nav .logo1 {
@@ -67,6 +72,7 @@ div a img {
     word-spacing: 0.4vw;
     font-weight: bold;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-top: 100px;
 }
 
 .banner img {
@@ -109,6 +115,7 @@ div a img {
     justify-content: center;
     align-items: center;
     /* text-transform: uppercase; */
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.395);
 }
 
 .about2 {
@@ -485,6 +492,7 @@ footer .follow .followlogo ul li a i {
         margin-bottom: 40px;
         margin-top: 30px;
         word-spacing: 0.6vw;
+        margin-top: 120px;
     }
 
     .banner img {
