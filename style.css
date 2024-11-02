@@ -653,7 +653,7 @@ footer .follow .followlogo ul li a i {
 
 
     .contact .info .number {
-        font-size: 20px;
+        font-size: 18px;
         gap: 3vw;
         margin-right: 10vw;
     }
@@ -665,6 +665,7 @@ footer .follow .followlogo ul li a i {
     .contact .info {
         gap: 1.8vh;
         width: 24rem;
+        margin-right: 5vw;
         
     }
 
