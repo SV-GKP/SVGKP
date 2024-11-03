@@ -67,11 +67,11 @@ div a img {
     text-align: center;
     margin-top: 30px;
     margin-bottom: 20px;
-    font-size: 2.3vw;
+    font-size: 2.3rem;
     word-spacing: 0.4vw;
     font-weight: bold;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    margin-top: 100px;
+    margin-top: 7rem;
 }
 
 div h2{
@@ -575,6 +575,10 @@ footer .follow .followlogo ul li a i {
         margin-top: 120px;
     }
 
+    div h2{
+        margin-top: 20px;
+        font-size: 3vh;
+    }
     .h1{
         margin-top: 10vh;
     }
@@ -615,7 +619,7 @@ footer .follow .followlogo ul li a i {
         border: 0.5px solid #e4b784;
         padding: 10px 35px ;
         gap: 40px;
-        width: 230px;
+        width: 250px;
         border-radius: 8px;
     }
     .january div span{
@@ -626,7 +630,7 @@ footer .follow .followlogo ul li a i {
         border: 0.5px solid #e4b784;
         padding: 10px 35px ;
         gap: 40px;
-        width: 230px;
+        width: 250px;
         border-radius: 8px;
     }
     .february div .febmor{
@@ -645,7 +649,7 @@ footer .follow .followlogo ul li a i {
         border: 0.5px solid #e4b784;
         padding: 10px 35px ;
         gap: 40px;
-        width: 230px;
+        width: 250px;
         border-radius: 8px;
     }
     .march div .marmor{
@@ -657,7 +661,7 @@ footer .follow .followlogo ul li a i {
         border: 0.5px solid #e4b784;
         padding: 10px 35px ;
         gap: 40px;
-        width: 230px;
+        width: 250px;
         border-radius: 8px;
     }
     .april div .aprmor{
@@ -669,7 +673,7 @@ footer .follow .followlogo ul li a i {
         border: 0.5px solid #e4b784;
         padding: 10px 35px ;
         gap: 40px;
-        width: 230px;
+        width: 250px;
         border-radius: 8px;
     }
     .may div .maymor{
@@ -681,7 +685,7 @@ footer .follow .followlogo ul li a i {
         border: 0.5px solid #e4b784;
         padding: 10px 35px ;
         gap: 40px;
-        width: 230px;
+        width: 250px;
         border-radius: 8px;
     }
     .june div .junemor{
@@ -693,7 +697,7 @@ footer .follow .followlogo ul li a i {
         border: 0.5px solid #e4b784;
         padding: 10px 35px ;
         gap: 40px;
-        width: 230px;
+        width: 250px;
         border-radius: 8px;
     }
     .july div .julymor{
@@ -705,7 +709,7 @@ footer .follow .followlogo ul li a i {
         border: 0.5px solid #e4b784;
         padding: 10px 35px ;
         gap: 40px;
-        width: 230px;
+        width: 250px;
         border-radius: 8px;
     }
     .august div .augmor{
@@ -717,7 +721,7 @@ footer .follow .followlogo ul li a i {
         border: 0.5px solid #e4b784;
         padding: 10px 35px ;
         gap: 40px;
-        width: 230px;
+        width: 250px;
         border-radius: 8px;
     }
     .september div .septeve{
@@ -731,7 +735,7 @@ footer .follow .followlogo ul li a i {
         border-radius: 8px;
         padding: 10px 35px ;
         gap: 40px;
-        width: 230px;
+        width: 250px;
     }
     .october div .octoeve{
         /* margin-right: ; */
@@ -744,7 +748,7 @@ footer .follow .followlogo ul li a i {
         border: 0.5px solid black;
         padding: 10px 35px ;
         gap: 40px;
-        width: 230px;
+        width: 250px;
     }
     .november div .noveve{
         margin-right: 20px;
@@ -755,7 +759,7 @@ footer .follow .followlogo ul li a i {
         border: 0.5px solid #e4b784;
         padding: 10px 35px ;
         gap: 40px;
-        width: 230px;
+        width: 250px;
         border-radius: 8px;
     }
     .december div .deceve{

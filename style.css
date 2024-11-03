@@ -73,7 +73,7 @@ div a img {
     word-spacing: 0.4vw;
     font-weight: bold;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    margin-top: 8rem;
+    margin-top: 7rem;
 }
 
 .banner img {
@@ -262,7 +262,7 @@ div.about2 .about {
     border: 15px solid rgb(0, 0, 0);
     margin-left: 25vw;
     margin-right: 25vw;
-    gap: 5vw;
+    gap: 3vw;
     padding: 1vw;
     border-radius: 5px;
 }
@@ -275,7 +275,7 @@ div.about2 .about {
 }
 
 .event .aboutevent {
-    width: 16vw;
+    width: 19vw;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -291,13 +291,27 @@ div.about2 .about {
     letter-spacing: 0.1vw;
 }
 
+.eventdate{
+    background-color: #e4b784;
+    padding: 4px 20px;
+    text-decoration: none;
+    border-radius: 20px;
+}
+
+.contact1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10vh;
+}
+
 .contact {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 10vh;
+    
     gap: 8vw;
-    margin-left: 8vw;
+    width: 70%;
 }
 
 .contact .info {
@@ -309,23 +323,28 @@ div.about2 .about {
     gap: 4vh;
 }
 
-.contact .info .number {
+.contact .info .number1 {
     display: flex;
-    align-items: center;
     gap: 1vw;
-    font-size: 25px;
-    font-weight: bold;
+    /* font-size: 25px; */
+    /* font-weight: bold; */
 }
 
-.contact .info .number i{
+.contact .info .number{
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+    font-size: 25px;
+}
+
+.contact .info .number1 i{
     color: green;
     font-size: 35px;
-    
 }
 
-.contact .info .number a{
+.contact .info .number div a{
     text-decoration: none;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .contact .info .number a:hover{
@@ -339,9 +358,9 @@ div.about2 .about {
     gap: 1vw;
 }
 
-.contact .info .email a{
+.contact .info .email div a{
     text-decoration: none;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .contact .info .email a:hover{
@@ -351,7 +370,7 @@ div.about2 .about {
 .contact .info .email i{
     margin-top: 0.5vh;
     color: red;
-    font-size: 25px;
+    font-size: 35px;
 }
 
 .contact .info .address {
@@ -363,7 +382,7 @@ div.about2 .about {
     /* margin-left: 2vw; */
 }
 
-.contact .info .address span a:hover{
+.contact .info .address div a:hover{
     text-decoration: underline;
 }
 
@@ -372,9 +391,10 @@ div.about2 .about {
     color: blue;
 }
 
-.address span a {
+.address div a {
     text-decoration: none;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #0000ee;
 }
 
 .contact .map div{
@@ -624,7 +644,7 @@ footer .follow .followlogo ul li a i {
     }
 
     .event .aboutevent {
-        width: 55vw;
+        width: 100%;
     }
 
     .event div img {
@@ -632,21 +652,20 @@ footer .follow .followlogo ul li a i {
         height: 330px;
     }
 
-    .contact {
-        flex-direction: column;
-        margin-top: 6vh;
-        align-items: center;
-        margin-left: 0;
-        width: 5rem;
-    }
-
     .contact1{
         display: flex;
-        flex-direction: column;
         justify-content: center;
         align-items: center;
+        margin-top: 3rem;
     }
 
+    .contact {
+        flex-direction: column;
+        align-items: center;
+        width: 90%;
+    }
+
+    
     .contact .map div {
         width: 60vw;
     }
@@ -657,41 +676,56 @@ footer .follow .followlogo ul li a i {
     }
 
 
-    .contact .info .number {
+    .contact .info .number1 {
         font-size: 17px;
         gap: 3vw;
         /* margin-right: 10vw; */
     }
 
-    .contact .info .number i{
+    .number1 i{
         font-size: 25px;
+    }
+
+    .number div a{
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 19px;
     }
 
     .contact .info {
         gap: 1.8vh;
-        width: 20rem;
+        width: 85%;
         /* margin-right: 13vw; */
         
     }
 
-    .contact .info .email {
-        font-size: 17px;
-        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    .contact .info .email{
         gap: 3vw;
+    }
+
+    .contact .info .email div a{
+        font-size: 18px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        
         /* margin-right: 10vw; */
     }
 
-    .contact .info .email i{
+    .contact .info .email div i{
         margin-bottom: 0.35vh;
     }
 
     .contact .info .address {
-        width: 22rem;
-        line-height: 3.5vh;
-        font-size: 17px;
+        width: 85%;
         gap: 3vw;
-        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     }
 
+    .address div i{
+        font-size: 25px;
+    }
+
+    .contact .info .address div a{
+        font-size: 17px;
+        line-height: 1vh;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
    
 }
