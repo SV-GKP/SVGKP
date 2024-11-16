@@ -37,12 +37,12 @@ nav .logo1 span a {
 
 nav .menu{
     display: flex;
-    gap: 2vw;
+    gap: 4vw;
 }
 
 nav div ul{
     display: flex;
-    gap: 2vw;
+    gap: 4vw;
     justify-content: center;
     align-items: center;
 }
@@ -109,14 +109,14 @@ div a img {
     word-spacing: 0.4vw;
     font-weight: bold;
     /* text-decoration-line: underline; */
-    color: #e4b784;
-    background-color: black;
+    color: #865217;
+    /* background-color: black; */
     height: 8vh;
     display: flex;
     justify-content: center;
     align-items: center;
     /* text-transform: uppercase; */
-    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.395);
+    /* box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.395); */
 }
 
 .about2 {
@@ -254,7 +254,7 @@ div.about2 .about {
     color: #e4b784;
 }
 
-.event {
+/* .event {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -296,6 +296,63 @@ div.about2 .about {
     padding: 4px 20px;
     text-decoration: none;
     border-radius: 20px;
+} */
+
+.eventwhole{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+}
+
+.event{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8rem;
+}
+
+.event1{
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0px 0px 30px 0px;
+    background-color: #e4b784;
+    border-radius: 12px;
+    box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.2);
+}
+
+.event1 div img{
+    width: 300px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+.event1info{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding-left: 1rem;
+    width: 270px;
+    font-family: "Baloo Bhai 2", sans-serif;
+    font-size: 18px;
+}
+
+.event1add{
+    display: flex;
+    justify-content: left;
+    align-items: start;
+    gap: 0.3rem;
+    text-indent: 0.3rem;
+    border: 1px solid black;
+    padding: 5px 0px 5px 0px;
+    border-radius: 30px;
+}
+
+.event1info div a {
+    text-decoration: none;
+    color: black;
 }
 
 .contact1{
@@ -402,6 +459,7 @@ div.about2 .about {
     padding: 3px;
     border: 10px solid black;
     border-radius: 10px;
+    box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.2);
 }
 
 footer {
@@ -635,7 +693,7 @@ footer .follow .followlogo ul li a i {
         width: 60vw;
     }
 
-    .event {
+    /* .event {
         flex-direction: column;
         padding: 2vh;
         margin-left: 10vw;
@@ -650,6 +708,11 @@ footer .follow .followlogo ul li a i {
     .event div img {
         width: 250px;
         height: 330px;
+    } */
+
+    .event{
+        flex-direction: column;
+        gap: 2rem;
     }
 
     .contact1{
