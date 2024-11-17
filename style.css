@@ -895,6 +895,10 @@ footer .follow .followlogo ul li a i {
         margin-bottom: 5px;
     }
 
+    .addhead{
+        font-weight: 700;
+    }
+
     .add{
         font-size: 25px;
         font-family: "Baloo Bhai 2", sans-serif;
