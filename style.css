@@ -102,7 +102,7 @@ div a img {
 
 .about1 {
     margin-top: 15vh;
-    font-size: 2.5rem;
+    font-size: 3.5rem;
     /* margin-left: 17vw; */
     text-align: center;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -355,7 +355,7 @@ div.about2 .about {
     color: black;
 }
 
-.contact1{
+/* .contact1{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -366,7 +366,6 @@ div.about2 .about {
     display: flex;
     justify-content: center;
     align-items: center;
-    
     gap: 8vw;
     width: 70%;
 }
@@ -376,15 +375,12 @@ div.about2 .about {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* align-items: center; */
     gap: 4vh;
 }
 
 .contact .info .number1 {
     display: flex;
     gap: 1vw;
-    /* font-size: 25px; */
-    /* font-weight: bold; */
 }
 
 .contact .info .number{
@@ -436,7 +432,6 @@ div.about2 .about {
     font-size: 25px;
     display: flex;
     gap: 1vw;
-    /* margin-left: 2vw; */
 }
 
 .contact .info .address div a:hover{
@@ -460,6 +455,110 @@ div.about2 .about {
     border: 10px solid black;
     border-radius: 10px;
     box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.2);
+} */
+
+.contactwhole{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e4b784bf;
+    margin-top: 40px;
+}
+
+.contact{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    padding-top: 40px;
+    padding-bottom: 80px;
+}
+
+.contactinfo{
+    display: flex;
+    justify-content: center;
+    gap: 8rem;
+}
+
+.address{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.address div i{
+    font-size: 50px;
+    margin-bottom: 20px;
+    color: #0d7282;
+}
+
+.addhead{
+    font-size: 25px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    letter-spacing: 0.1rem;
+}
+
+.add{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.add :nth-child(2){
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.phoneno{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.phoneno div a{
+    text-decoration: none;
+    color: black;
+}
+
+.mail a{
+    text-decoration: none;
+    color: black;
+}
+
+.add{
+    font-size: 18px;
+    font-family: "Baloo Bhai 2", sans-serif;
+    font-weight: 500;
+}
+
+.phoneno{
+    font-size: 20px;
+    font-family: "Baloo Bhai 2", sans-serif;
+    font-weight: 500;
+}
+
+.mail{
+    font-size: 18px;
+    font-family: "Baloo Bhai 2", sans-serif;
+    font-weight: 500;
+}
+
+.map{
+    box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.273);
+    border-radius: 10px;
+}
+
+.map iframe{
+    border-radius: 10px;
 }
 
 footer {
@@ -467,7 +566,7 @@ footer {
     justify-content: center;
     align-items: center;
     gap: 10vw;
-    margin-top: 20vh;
+    /* margin-top: 20vh; */
     border-top: 1px solid black;
     padding-top: 10vh;
     background-color: rgb(0, 0, 0);
@@ -641,7 +740,7 @@ footer .follow .followlogo ul li a i {
 
     footer {
         flex-direction: column;
-        margin-top: 10vh;
+        /* margin-top: 10vh; */
     }
 
     footer .follow .followlogo ul {
@@ -671,7 +770,7 @@ footer .follow .followlogo ul li a i {
         width: 35vh;
         text-align: justify;
         line-height: 4vh;
-        font-size: 16px;
+        font-size: 14px;
         margin-top: 2vh;
     }
 
@@ -715,7 +814,7 @@ footer .follow .followlogo ul li a i {
         gap: 2rem;
     }
 
-    .contact1{
+    /* .contact1{
         display: flex;
         justify-content: center;
         align-items: center;
@@ -742,7 +841,6 @@ footer .follow .followlogo ul li a i {
     .contact .info .number1 {
         font-size: 17px;
         gap: 3vw;
-        /* margin-right: 10vw; */
     }
 
     .number1 i{
@@ -757,7 +855,6 @@ footer .follow .followlogo ul li a i {
     .contact .info {
         gap: 1.8vh;
         width: 85%;
-        /* margin-right: 13vw; */
         
     }
 
@@ -768,8 +865,6 @@ footer .follow .followlogo ul li a i {
     .contact .info .email div a{
         font-size: 18px;
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-        
-        /* margin-right: 10vw; */
     }
 
     .contact .info .email div i{
@@ -789,6 +884,34 @@ footer .follow .followlogo ul li a i {
         font-size: 17px;
         line-height: 1vh;
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    } */
+
+    .contactinfo{
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+    .address div i{
+        margin-bottom: 5px;
+    }
+
+    .add{
+        font-size: 25px;
+        font-family: "Baloo Bhai 2", sans-serif;
+    }
+
+    .phoneno{
+        font-size: 25px;
+        font-family: "Baloo Bhai 2", sans-serif;
+    }
+
+    .mail{
+        font-size: 20px;
+        font-family: "Baloo Bhai 2", sans-serif;
+    }
+
+    .map iframe{
+        width: 250px;
     }
    
 }
