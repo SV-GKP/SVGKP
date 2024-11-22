@@ -580,7 +580,7 @@ footer .logo {
 }
 
 footer .logo a img {
-    border: 3px solid rgb(255, 255, 255);
+    border: 3px solid #e4b784;
     border-radius: 30px;
 }
 
@@ -781,15 +781,20 @@ footer .follow .followlogo ul li a i {
     }
 
     .aboutvideo .abtvid1{
-        width: 60vw;
+        width: 50vw;
+        height: 15vh;
+        padding: 20px;
     }
 
     .aboutvideo div iframe {
         width: 50vw;
+        height: 15vh;
     }
 
     .aboutvideo .abtvid2{
-        width: 60vw;
+        width: 50vw;
+        height: 15vh;
+        padding: 20px;
     }
 
     /* .event {
