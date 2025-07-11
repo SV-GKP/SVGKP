@@ -2,6 +2,27 @@
 <html lang="en">
 
 <head>
+    <!-- Title -->
+<title>Satsang Vihar Gorakhpur | Official Website</title>
+
+<!-- Description -->
+<meta name="description" content="Official website of Satsang Vihar Gorakhpur. View prayer times, events, teachings of Sree Sree Thakur Anukulchandra and spiritual updates.">
+
+<!-- Keywords -->
+<meta name="keywords" content="Satsang, Gorakhpur, Anukulchandra, prayer time, satsang vihar, Thakur, satsang india">
+
+<!-- Author -->
+<meta name="author" content="Satsang Vihar Gorakhpur">
+
+<!-- Viewport for responsiveness -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta property="og:title" content="Satsang Vihar Gorakhpur" />
+<meta property="og:description" content="Prayer time, upcoming events, and teachings from Sree Sree Thakur Anukulchandra at SVGKP." />
+<meta property="og:image" content="https://svgkp.netlify.app/images/campus8.jpg" />
+<meta property="og:url" content="https://svgkp.netlify.app/" />
+<meta property="og:type" content="website" />
+
     <meta charset="UTF-8">
     <link rel="shortcut icon" type="x-icon" href="logo wo bg.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,14 +43,16 @@
                 <i class="fas fa-bars"></i>
               </div>
             <div class="menu" id="menu">
-            <ul class="ul1">
+            <ul class="ul">
                 <li><a href="#about">About Us</a></li>
                 <li><a href="pt.html">Prayer Time</a></li>
-            </ul>
-            <ul class="ul2">
                 <li><a href="#ue">Upcoming Events</a></li>
                 <li><a href="#contact">Contact Us</a></li>
             </ul>
+            <!-- <ul class="ul2">
+                <li><a href="#ue">Upcoming Events</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul> -->
         </div>
         </nav>
     </header>
@@ -55,6 +78,23 @@
             envisioned by <b>SREE SREE THAKUR ANUKULCHANDRA</b> in consultation with <b>PARAM PUJYAPAD SREE SREE
                 ACHARYADEV</b> of <b>Satsang, Deoghar, INDIA</b>.</div>
     </div>
+    <div class="campus-slider">
+  <img src="campus1.JPG" alt="Mandir Campus 1" class="slide contain">
+  <img src="campus2.jpg" alt="Mandir Campus 2" class="slide contain">
+  <img src="campus3.jpg" alt="Mandir Campus 3" class="slide contain">
+  <img src="campus4.jpg" alt="Mandir Campus 4" class="slide contain">
+  <img src="campus5.jpg" alt="Mandir Campus 5" class="slide contain">
+  <img src="campus6.jpg" alt="Mandir Campus 6" class="slide contain">
+  <img src="campus7.jpg" alt="Mandir Campus 7" class="slide contain">
+  <img src="campus8.jpg" alt="Mandir Campus 8" class="slide contain">
+  <img src="campus9.jpg" alt="Mandir Campus 9" class="slide contain">
+  <!-- Add more images as needed -->
+   <div class="slider-dots" id="slider-dots"></div>
+  <div class="slider-buttons">
+    <button onclick="prevSlide()">‹</button>
+    <button onclick="nextSlide()">›</button>
+  </div>
+</div>
     <div class="aboutvideo">
         <div class="abtvid1"><iframe width="365" height="215" src="https://www.youtube.com/embed/j9ZMqhAUCYU?si=lJ539txGcJOvqzvk"
                 title="YouTube video player" frameborder="0"
@@ -297,7 +337,13 @@
             </div>
         </div>
     </footer>
+
+    <div id="lightbox" class="lightbox">
+  <span class="close" onclick="closeLightbox()">&times;</span>
+  <img id="lightbox-img" src="" alt="Expanded View">
+</div>
     <script src="index.js"></script>
+
       
 </body>
 

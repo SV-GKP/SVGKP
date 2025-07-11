@@ -1,3 +1,5 @@
+let startX = 0;
+let endX = 0;
 
         const hamburger = document.getElementById("hamburger");
         const menu = document.getElementById("menu");
@@ -37,3 +39,86 @@ fetch('events.json')
   })
   .catch(err => console.error("Failed to load events:", err));
 
+let slideIndex = 0;
+const slides = document.querySelectorAll('.campus-slider .slide');
+
+function showSlide(index) {
+  slides.forEach((slide, i) => {
+    slide.classList.toggle("active", i === index);
+  });
+
+  // Highlight active dot
+  const dots = document.querySelectorAll(".slider-dots .dot");
+  dots.forEach((dot, i) => {
+    dot.classList.toggle("active", i === index);
+  });
+}
+
+// Create navigation dots
+const dotsContainer = document.getElementById("slider-dots");
+
+slides.forEach((_, i) => {
+  const dot = document.createElement("span");
+  dot.classList.add("dot");
+  if (i === 0) dot.classList.add("active");
+  dot.addEventListener("click", () => {
+    slideIndex = i;
+    showSlide(slideIndex);
+  });
+  dotsContainer.appendChild(dot);
+});
+
+function nextSlide() {
+  slideIndex = (slideIndex + 1) % slides.length;
+  showSlide(slideIndex);
+}
+
+function prevSlide() {
+  slideIndex = (slideIndex - 1 + slides.length) % slides.length;
+  showSlide(slideIndex);
+}
+
+// Auto-slide every 5 seconds
+setInterval(nextSlide, 20000);
+
+showSlide(slideIndex);
+
+// 🧠 Swipe support
+const slider = document.querySelector('.campus-slider');
+
+slider.addEventListener('touchstart', e => {
+  startX = e.touches[0].clientX;
+});
+
+slider.addEventListener('touchend', e => {
+  endX = e.changedTouches[0].clientX;
+  handleSwipe();
+});
+
+function handleSwipe() {
+  if (endX < startX - 50) nextSlide();      // swipe left
+  else if (endX > startX + 50) prevSlide(); // swipe right
+}
+
+// 💡 Fullscreen lightbox support
+const lightbox = document.getElementById("lightbox");
+const lightboxImg = document.getElementById("lightbox-img");
+
+// When image is clicked
+slides.forEach((img) => {
+  img.style.cursor = "zoom-in";
+  img.addEventListener("click", () => {
+    lightbox.style.display = "flex";
+    lightboxImg.src = img.src;
+  });
+});
+
+// Close lightbox
+function closeLightbox() {
+  const lightbox = document.getElementById("lightbox");
+  lightbox.style.display = "none";
+}
+
+img.addEventListener("click", () => {
+  console.log("Image tapped!"); // Open DevTools on mobile (or remote debug)
+});

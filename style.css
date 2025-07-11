@@ -152,6 +152,86 @@ div.about2 .about {
     text-align: right;
 }
 
+.slide.cover { object-fit: cover; }
+.slide.contain { object-fit: contain; }
+
+.campus-slider {
+  position: relative;
+  max-width: 100%;
+  margin-top: 30px ;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.campus-slider img {
+  transition: all 0.3s ease-in-out;
+}
+
+.campus-slider .slide {
+   position: absolute;
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+  width: 100%;
+  height: 400px;
+  object-fit: contain;
+  background-color: white;
+  padding: 10px;
+  border-radius: 12px;
+  touch-action: manipulation;
+}
+
+.campus-slider .slide.active {
+  opacity: 1;
+  position: relative;
+  z-index: 1;
+}
+
+.slider-dots {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.slider-dots .dot {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin: 0 5px;
+  background-color: #aaa;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.slider-dots .dot.active {
+  background-color: black;
+  transform: scale(1.3);
+}
+
+.slider-buttons {
+   position: absolute;
+  top: 50%;
+  left: 0;
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+  z-index: 10;
+  padding: 0 10px;
+}
+
+.slider-buttons button {
+  background-color: rgb(0, 0, 0);
+  color: white;
+  border: none;
+  font-size: 24px;
+  padding: 20px 30px;
+  border-radius: 10%;
+  cursor: pointer;
+  z-index: 11;
+}
+
+
 .aboutvideo {
     display: flex;
     justify-content: center;
@@ -332,9 +412,9 @@ div.about2 .about {
 
 .event1 div img{
   width: 100%;
-  height: 180px;
-  object-fit: contain;
-  object-position: top;
+  height: 280px;
+  object-fit: cover;
+  object-position: 7% 50% ;
   background-color: white; /* optional padding background */
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
@@ -635,6 +715,37 @@ footer .follow .followlogo ul li a i {
     color: white;
 }
 
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.85);
+  justify-content: center;
+  align-items: center;
+}
+
+.lightbox img {
+  max-width: 90%;
+  max-height: 80%;
+  border-radius: 12px;
+  box-shadow: 0 0 20px #fff;
+}
+
+.lightbox .close {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 10000;
+}
+
 @media only screen and (max-width: 600px) {
     nav .logo1 {
         flex-direction: row;
@@ -708,6 +819,11 @@ footer .follow .followlogo ul li a i {
         font-size: 0.8rem;
     }
 
+    .slider-buttons button {
+    padding: 6px 10px;
+    font-size: 16px;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
 
     .about1 {
         font-size: 3vh;
@@ -735,7 +851,8 @@ footer .follow .followlogo ul li a i {
 
     .pt .ptvid .mor .morhead {
         text-align: center;
-
+        font-size: 18px;
+        margin-top: 15px;
     }
 
     .pt .ptvid .mor div iframe {
@@ -750,6 +867,8 @@ footer .follow .followlogo ul li a i {
 
     .pt .ptvid .eve .evehead {
         text-align: center;
+        font-size: 18px;
+        margin-top: 15px;
     }
 
     .pt .ptvid .eve div iframe {
@@ -830,6 +949,16 @@ footer .follow .followlogo ul li a i {
         font-size: 14px;
         margin-top: 2vh;
     }
+
+    .campus-slider .slide {
+    height: 220px;
+  }
+
+  .slider-buttons button {
+    font-size: 18px;
+  /* padding: 6px 10px; */
+  background-color: black;
+  }
 
     .aboutvideo {
         flex-direction: column;
