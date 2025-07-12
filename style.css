@@ -1,1137 +1,156 @@
-@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400..800&family=Exo:ital,wght@0,100..900;1,100..900&display=swap');
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400..800&family=Exo:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@400..900&family=Inter:wght@300;400;500;600;700&family=Cambria&family=Impact&family=Trebuchet+MS&display=swap');
+
+/* Tailwind CSS CDN */
+@import url('https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css');
+
+/* Custom Font Definitions */
+.font-baloo-bhai { font-family: 'Baloo Bhai 2', sans-serif; }
+.font-exo { font-family: 'Exo', sans-serif; }
+.font-orbitron { font-family: 'Orbitron', sans-serif; }
+.font-inter { font-family: 'Inter', sans-serif; }
+.font-cambria { font-family: 'Cambria', serif; } /* Custom font, ensure it's available or fallback */
+.font-impact { font-family: 'Impact', sans-serif; } /* Custom font, ensure it's available or fallback */
+.font-trebuchet { font-family: 'Trebuchet MS', sans-serif; } /* Custom font, ensure it's available or fallback */
 
 
-* {
+/* Base Styles */
+body {
     margin: 0;
     padding: 0;
+    font-family: 'Inter', sans-serif; /* Default font */
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f8f8;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+}
 
+/* Dark mode for specific elements */
+body.dark-mode .bg-gray-50 {
+    background-color: #2a2a2a;
+}
 
-nav {
+body.dark-mode .bg-white {
+    background-color: #1a1a1a;
+}
+
+body.dark-mode .text-gray-800 {
+    color: #e0e0e0;
+}
+
+body.dark-mode .text-gray-600 {
+    color: #b0b0b0;
+}
+
+body.dark-mode .text-orange-700 {
+    color: #e4b784; /* Adjusted for dark mode visibility */
+}
+
+body.dark-mode .bg-orange-200 {
+    background-color: #3a3a3a;
+}
+
+body.dark-mode .bg-white.rounded-lg.shadow-md {
+    background-color: #2a2a2a;
+}
+
+body.dark-mode .text-gray-900 {
+    color: #e0e0e0;
+}
+
+body.dark-mode .text-gray-700 {
+    color: #b0b0b0;
+}
+
+body.dark-mode .border-gray-900 {
+    border-color: #555;
+}
+
+/* Specific styles for the campus slider (if not fully handled by Tailwind) */
+#campus-slider {
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-    background-color: rgb(0, 0, 0);
-    height: 9vh;
-    position: fixed;
-    top: 0;
+    transition: transform 0.5s ease-in-out;
+}
+
+#campus-slider img {
     width: 100%;
-    z-index: 999;
-    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.395);
+    flex-shrink: 0;
+    object-fit: contain; /* or contain, depending on preference */
 }
 
-.hamburger {
-    display: none;
-    font-size: 28px;
-    color: white;
+/* Slider dots */
+#slider-dots .dot {
+    width: 12px;
+    height: 12px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
     cursor: pointer;
-  }
-
-nav .logo1 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 2vw;
-}
-
-nav .logo1 span a {
-    text-decoration: none;
-    color: white;
-    font-family: "Baloo Bhai 2", sans-serif;
-    font-size: 20px;
-}
-
-nav .menu{
-    display: flex;
-    gap: 4vw;
-}
-
-nav div ul{
-    display: flex;
-    gap: 4vw;
-    justify-content: center;
-    align-items: center;
-}
-
-nav ul li {
-    list-style: none;
-}
-
-nav div ul li a {
-    color: rgb(255, 255, 255);
-    font-size: 20px;
-    text-decoration: none;
-    font-family: "Baloo Bhai 2", sans-serif;
-}
-
-div a img {
-    height: 5vh;
-    margin-top: 0.4vh;
-    border: 3px solid white;
-    border-radius: 30px;
-}
-
-.head {
-    text-align: center;
-    margin-top: 30px;
-    margin-bottom: 20px;
-    font-size: 2.3rem;
-    word-spacing: 0.4vw;
-    font-weight: bold;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    margin-top: 7rem;
-}
-
-.banner img {
-    width: 70vw;
-    margin-left: 15vw;
-    margin-top: 5vh;
-    margin-bottom: 5vh;
-}
-
-
-.quote {
-    text-align: center;
-    font-weight: bold;
-    word-spacing: 0.5vw;
-    font-size: 1.7rem;
-    margin-top: 8vh;
-    line-height: 7vh;
-    font-family: "Baloo 2", sans-serif;
-}
-
-.quote div:nth-child(2) {
-    margin-left: 38vw;
-    font-size: 0.9em;
-    word-spacing: 0.2em;
-}
-
-.about1 {
-    margin-top: 15vh;
-    font-size: 3.5rem;
-    /* margin-left: 17vw; */
-    text-align: center;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    word-spacing: 0.4vw;
-    font-weight: bold;
-    /* text-decoration-line: underline; */
-    color: #865217;
-    /* background-color: black; */
-    height: 8vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* text-transform: uppercase; */
-    /* box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.395); */
-}
-
-.about2 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 8vh;
-    gap: 8vw;
-
-}
-
-.about2 div img {
-    height: 60vh;
-    width: 25vw;
-    border-radius: 40px;
-    box-shadow: 0 0 50px rgb(121, 208, 235),
-    0 0 100px rgb(121, 208, 235);
-}
-
-div.about2 .about {
-    width: 30vw;
-    font-size: 22px;
-    line-height: 7vh;
-    font-family: "Exo", sans-serif;
-    font-weight: 500;
-    text-align: right;
-}
-
-.slide.cover { object-fit: cover; }
-.slide.contain { object-fit: contain; }
-
-.campus-slider {
-  position: relative;
-  max-width: 100%;
-  margin-top: 30px ;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.campus-slider img {
-  transition: all 0.3s ease-in-out;
-}
-
-.campus-slider .slide {
-   position: absolute;
-  opacity: 0;
-  transition: opacity 0.8s ease-in-out;
-  width: 100%;
-  height: 400px;
-  object-fit: contain;
-  background-color: white;
-  padding: 10px;
-  border-radius: 12px;
-  touch-action: manipulation;
-}
-
-.campus-slider .slide.active {
-  opacity: 1;
-  position: relative;
-  z-index: 1;
-}
-
-.slider-dots {
-  text-align: center;
-  margin-top: 10px;
-}
-
-.slider-dots .dot {
-  display: inline-block;
-  width: 12px;
-  height: 12px;
-  margin: 0 5px;
-  background-color: #aaa;
-  border-radius: 50%;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.slider-dots .dot.active {
-  background-color: black;
-  transform: scale(1.3);
-}
-
-.slider-buttons {
-   position: absolute;
-  top: 50%;
-  left: 0;
-  width: 95%;
-  display: flex;
-  justify-content: space-between;
-  transform: translateY(-50%);
-  z-index: 10;
-  padding: 0 10px;
-}
-
-.slider-buttons button {
-  background-color: rgb(0, 0, 0);
-  color: white;
-  border: none;
-  font-size: 24px;
-  padding: 20px 30px;
-  border-radius: 10%;
-  cursor: pointer;
-  z-index: 11;
-}
-
-
-.aboutvideo {
-    display: flex;
-    justify-content: center;
-    gap: 10vw;
-    margin-top:18vh;
-    align-items: center;
-}
-
-.aboutvideo .abtvid1 {
-    width: 28vw;
-    background-color: black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 5px;
-    height: 30vh;
-}
-
-.aboutvideo .abtvid2 {
-    width: 28vw;
-    background-color: black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 5px;
-    height: 30vh;
-}
-
-.aboutvideo div iframe {
-    border-radius: 10px;
-    /* padding: 20px; */
-    background-color: rgb(0, 0, 0);
-    border: 4px solid #e4b784;
-    border-radius: 5px;
-    width: 25vw;
-    height: 25vh;
-}
-
-.pt {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10vw;
-    margin-top: 8vh;
-}
-
-.pt div img {
-    height: 60vh;
-    border-radius: 20px;
-}
-
-.pt .ptvid {
-    display: flex;
-    /* flex-direction: column; */
-    justify-content: center;
-    align-items: center;
-    gap: 8vw;
-}
-
-.pt .ptvid .mor {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1vw;
-    padding: 2vh 2vh 3vh 2vh;
-    background-color: rgb(0, 0, 0);
-    border-radius: 5px;
-    width: 22vw;
-}
-
-.pt .ptvid .mor div iframe {
-    border-radius: 5px;
-    width: 20vw;
-    border: 4px solid #e4b784;
-}
-
-.pt .ptvid .mor .morhead {
-    font-size: 21px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-weight: bold;
-    color: #e4b784;
-}
-
-.pt .ptvid .eve {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1vw;
-    padding: 2vh 2vh 3vh 2vh;
-    background-color: rgb(0, 0, 0);
-    border-radius: 5px;
-    width: 22vw;
-}
-
-.pt .ptvid .eve div iframe {
-    border-radius: 5px;
-    width: 20vw;
-    border: 4px solid #e4b784;
-}
-
-.pt .ptvid .eve .evehead {
-    font-size: 21px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-weight: bold;
-    color: #e4b784;
-}
-
-/* .event {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 5vh;
-    border: 15px solid rgb(0, 0, 0);
-    margin-left: 25vw;
-    margin-right: 25vw;
-    gap: 3vw;
-    padding: 1vw;
-    border-radius: 5px;
-}
-
-.event div img {
-    width: 19vw;
-    height: 55vh;
-    border-radius: 5px;
-    border: 10px solid #e4b784;
-}
-
-.event .aboutevent {
-    width: 19vw;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 3vw;
-}
-
-.event .aboutevent div {
-    line-height: 5vh;
-    font-size: 20px;
-    font-weight: 500;
-    text-align: center;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    letter-spacing: 0.1vw;
-}
-
-.eventdate{
-    background-color: #e4b784;
-    padding: 4px 20px;
-    text-decoration: none;
-    border-radius: 20px;
-} */
-
-.eventwhole{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 3rem;
-}
-
-.event{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 8rem;
-}
-
-.event1{
-    width: 300px;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    padding: 0px 0px 30px 0px;
-    background-color: #e4b784;
-    border-radius: 12px;
-    box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.2);
-}
-
-.event1 div img{
-  width: 100%;
-  height: 280px;
-  object-fit: cover;
-  object-position: 7% 50% ;
-  background-color: white; /* optional padding background */
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-}
-
-.event1info{
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    padding-left: 1rem;
-    width: 270px;
-    font-family: "Baloo Bhai 2", sans-serif;
-    font-size: 18px;
-}
-
-.event1add{
-     display: flex;
-  align-items: center;
-  gap: 8px;
-  padding: 8px 16px;
-  border: 1.5px solid black;
-  border-radius: 30px;
-  background-color: white;
-  font-size: 16px;
-}
-
-.event1add i {
-  font-size: 18px;
-  color: black;
-}
-
-.event1info div a {
-    text-decoration: none;
-    color: black;
-}
-
-/* .contact1{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 10vh;
-}
-
-.contact {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 8vw;
-    width: 70%;
-}
-
-.contact .info {
-    width: 30vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 4vh;
-}
-
-.contact .info .number1 {
-    display: flex;
-    gap: 1vw;
-}
-
-.contact .info .number{
-    display: flex;
-    flex-direction: column;
-    gap: 1vh;
-    font-size: 25px;
-}
-
-.contact .info .number1 i{
-    color: green;
-    font-size: 35px;
-}
-
-.contact .info .number div a{
-    text-decoration: none;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-
-.contact .info .number a:hover{
-    text-decoration: underline;
-}
-
-.contact .info .email {
-    font-size: 25px;
-    display: flex;
-    align-items: center;
-    gap: 1vw;
-}
-
-.contact .info .email div a{
-    text-decoration: none;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-}
-
-.contact .info .email a:hover{
-    text-decoration: underline;
-}
-
-.contact .info .email i{
-    margin-top: 0.5vh;
-    color: red;
-    font-size: 35px;
-}
-
-.contact .info .address {
-    text-align: start;
-    line-height: 5vh;
-    font-size: 25px;
-    display: flex;
-    gap: 1vw;
-}
-
-.contact .info .address div a:hover{
-    text-decoration: underline;
-}
-
-.contact .info .address i{
-    margin-top: 0.5vh;
-    color: blue;
-}
-
-.address div a {
-    text-decoration: none;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: #0000ee;
-}
-
-.contact .map div{
-    background-color: #e4b784;
-    padding: 3px;
-    border: 10px solid black;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.2);
-} */
-
-.contactwhole{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #e4b784bf;
-    margin-top: 40px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.contact{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 4rem;
-    padding-top: 40px;
-    padding-bottom: 80px;
+#slider-dots .dot.active {
+    background-color: #e4b784; /* Active dot color */
+    transform: scale(1.2);
 }
 
-.contactinfo{
-    display: flex;
-    justify-content: center;
-    gap: 8rem;
+/* Mobile menu specific styles */
+#mobile-menu.hidden {
+    display: none;
 }
 
-.address{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5rem;
+#mobile-menu.show {
+    display: block;
 }
 
-.address div i{
-    font-size: 50px;
-    margin-bottom: 20px;
-    color: #0d7282;
+/* Upcoming Events Grid Centering */
+#events-container {
+    display: grid;
+    /* Changed to use a fixed width for columns, allowing justify-content to center the group */
+    grid-template-columns: repeat(auto-fit, 280px); 
+    gap: 2rem; /* Tailwind gap-8 */
+    justify-content: center; /* Center items horizontally when they don't fill the row */
+    padding: 0 1rem; /* Add some padding to the container */
+    margin: 0 auto; /* Center the container itself */
+    max-width: 1200px; /* Limit max width for better readability */
 }
-
-.addhead{
-    font-size: 25px;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    letter-spacing: 0.1rem;
-}
-
-.add{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 0.3rem;
-}
-
-.add :nth-child(2){
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 0.3rem;
-}
-
-.phoneno{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 0.3rem;
-}
-
-.phoneno div a{
-    text-decoration: none;
-    color: black;
-}
-
-.mail a{
-    text-decoration: none;
-    color: black;
-}
-
-.add{
-    font-size: 18px;
-    font-family: "Baloo Bhai 2", sans-serif;
-    font-weight: 500;
-}
-
-.phoneno{
-    font-size: 20px;
-    font-family: "Baloo Bhai 2", sans-serif;
-    font-weight: 500;
-}
-
-.mail{
-    font-size: 18px;
-    font-family: "Baloo Bhai 2", sans-serif;
-    font-weight: 500;
-}
-
-.map{
-    box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.273);
-    border-radius: 10px;
-}
-
-.map iframe{
-    border-radius: 10px;
-}
-
-footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10vw;
-    /* margin-top: 20vh; */
-    border-top: 1px solid black;
-    padding-top: 10vh;
-    background-color: rgb(0, 0, 0);
-}
-
-footer .logo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 2vw;
-}
-
-footer .logo a img {
-    border: 3px solid #e4b784;
-    border-radius: 30px;
-}
-
-footer .logo a{
-    text-decoration: none;
-    font-size: 25px;
-    color: #e4b784;
-}
-
-footer .follow {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.1vh;
-}
-
-footer .follow .followhead {
-    font-size: 25px;
-    font-weight: bold;
-    color: #e4b784;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}
-
-footer .follow .followlogo ul {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    list-style: none;
-    gap: 4vw;
-}
-
-footer .follow .followlogo ul li a i {
-    margin-top: 3vh;
-    margin-bottom: 7vh;
-    font-size: 40px;
-    color: white;
-}
-
-.lightbox {
-  display: none;
-  position: fixed;
-  z-index: 9999;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.85);
-  justify-content: center;
-  align-items: center;
-}
-
-.lightbox img {
-  max-width: 90%;
-  max-height: 80%;
-  border-radius: 12px;
-  box-shadow: 0 0 20px #fff;
-}
-
-.lightbox .close {
-  position: absolute;
-  top: 20px;
-  right: 35px;
-  color: #fff;
-  font-size: 40px;
-  font-weight: bold;
-  cursor: pointer;
-  z-index: 10000;
-}
-
-@media only screen and (max-width: 600px) {
-    nav .logo1 {
-        flex-direction: row;
-        justify-content: flex-start;
-        align-items: center;
-        gap: 2vw;
-        margin-left: 2vw;
-        margin-top: 0.5vh;
-      }
-
-      
 
-    nav {
-        height: 11vh;
-        gap: 16vw;
+/* Adjustments for smaller screens */
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 3rem;
     }
-
-    nav .menu{
-        margin-top: 0.5vh;
-        gap: 4vh;
+    .hero-section p {
+        font-size: 1.25rem;
     }
-
-    nav div ul {
+    .about-content {
         flex-direction: column;
-        align-items: start;
-        gap: 1.5vh;
-    }
-
-    /* nav div .ul1{
-        margin-right: 3vw;
-    }
-
-    nav div .ul2{
-        margin-left: 3vw;
-    } */
-
-    /* nav .menu .ul1 {
-        gap: 24vw;
-    }
-
-    nav .menu .ul2{
-        gap: 11vw;
-    } */
-
-    nav div ul li a {
-        font-size: 14px;
-        /* word-wrap: break-word; */
-    }
-
-    .head {
-        font-size: 1.3rem;
-        margin-bottom: 40px;
-        margin-top: 30px;
-        word-spacing: 0.6vw;
-        margin-top: 120px;
-    }
-
-    .banner img {
-        width: 100vw;
-        margin: 0;
-    }
-
-    .quote1 {
-        font-size: 0.75rem;
-        margin-top: 3vh;
-    }
-
-    .quote div:nth-child(2) {
-        margin-top: -2vh;
-        margin-left: 15vw;
-        font-size: 0.8rem;
-    }
-
-    .slider-buttons button {
-    padding: 6px 10px;
-    font-size: 16px;
-    background-color: rgba(0, 0, 0, 0.5);
-  }
-
-    .about1 {
-        font-size: 3vh;
-        margin-top: 8vh;
-    }
-
-    .pt {
-        flex-direction: row;
-        margin-top: 4vh;
-    }
-
-    .pt .ptvid {
-        gap: 3vh;
-        flex-direction: row;
-    }
-
-    .pt div img {
-        height: 40vh;
-    }
-
-    .pt .ptvid .mor {
-        width: 60vw;
-        height: 20vh;
-    }
-
-    .pt .ptvid .mor .morhead {
         text-align: center;
-        font-size: 18px;
-        margin-top: 15px;
     }
-
-    .pt .ptvid .mor div iframe {
-        width: 55vw;
-        height: 15vh;
+    .about-content img {
+        margin-bottom: 2rem;
     }
-
-    .pt .ptvid .eve {
-        width: 60vw;
-        height: 20vh;
+    .contact-info {
+        grid-template-columns: 1fr;
     }
-
-    .pt .ptvid .eve .evehead {
-        text-align: center;
-        font-size: 18px;
-        margin-top: 15px;
-    }
-
-    .pt .ptvid .eve div iframe {
-        width: 55vw;
-        height: 15vh;
-    }
-
-    footer {
-        flex-direction: column;
-        /* margin-top: 10vh; */
-    }
-
-    footer .follow .followlogo ul {
-        /* flex-direction: column; */
-        gap: 30px;
-    }
-
-    footer .follow .followlogo ul li a svg {
-        width: 7vw;
+    #events-container {
+        grid-template-columns: 1fr; /* Single column on small screens */
     }
 }
 
-@media only screen and (max-width: 1400px) {
-
-    .hamburger {
-        display: block;
-        position: absolute;
-        right: 20px;
-        z-index: 1000;
-      }
-
-      nav {
-        justify-content: space-between !important;
-      }
-    
-      nav .menu {
-        display: none;
-        flex-direction: column;
-        background-color: black;
-        position: absolute;
-        top: 60px;
-        right: 0;
-        width: 100%;
-        text-align: center;
-        padding: 20px 0;
-      }
-    
-      nav .menu.show {
-        display: flex;
-      }
-    
-      nav .menu ul {
-        flex-direction: column;
-        gap: 15px;
-      }
-    
-      nav .menu ul li a {
-        font-size: 18px;
-      }
-    
-
-    .about2 {
-        flex-direction: column;
-        margin-top: 6vh;
+@media (max-width: 480px) {
+    .hero-section h1 {
+        font-size: 2.5rem;
     }
-
-    .about2 div img {
-        height: 280px;
-        width: 250px;
-        border-radius: 40px;
-        margin-top: 5vh;
+    .hero-section p {
+        font-size: 1rem;
     }
-
-    div.about2 .about {
-        width: 35vh;
-        text-align: justify;
-        line-height: 4vh;
-        font-size: 14px;
-        margin-top: 2vh;
-    }
-
-    .campus-slider .slide {
-    height: 220px;
-  }
-
-  .slider-buttons button {
-    font-size: 18px;
-  /* padding: 6px 10px; */
-  background-color: black;
-  }
-
-    .aboutvideo {
-        flex-direction: column;
-        margin-top: 6vh;
-        gap: 5vh;
-    }
-
-    .aboutvideo .abtvid1{
-        width: 50vw;
-        height: 15vh;
-        padding: 20px;
-    }
-
-    .aboutvideo div iframe {
-        width: 50vw;
-        height: 15vh;
-    }
-
-    .aboutvideo .abtvid2{
-        width: 50vw;
-        height: 15vh;
-        padding: 20px;
-    }
-
-    .pt .ptvid .mor {
-        width: 30vw;
-        height: 25vh;
-    }
-
-    .pt .ptvid .mor div iframe {
-    border-radius: 5px;
-    width: 29vw;
-    border: 4px solid #e4b784;
-    margin-top: 10px;
+    .text-4xl { font-size: 2.25rem; }
+    .text-5xl { font-size: 2.5rem; }
 }
 
-    .pt .ptvid .eve {
-        width: 30vw;
-        height: 25vh;
-    }
-
-    .pt .ptvid .eve div iframe {
-    border-radius: 5px;
-    width: 29vw;
-    border: 4px solid #e4b784;
-    margin-top: 10px;
-}
-
-    /* .event {
-        flex-direction: column;
-        padding: 2vh;
-        margin-left: 10vw;
-        margin-right: 10vw;
-        margin-top: 2.5vh;
-    }
-
-    .event .aboutevent {
-        width: 100%;
-    }
-
-    .event div img {
-        width: 250px;
-        height: 330px;
-    } */
-
-    .event{
-        flex-direction: column;
-        gap: 2rem;
-    }
-
-    /* .contact1{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-top: 3rem;
-    }
-
-    .contact {
-        flex-direction: column;
-        align-items: center;
-        width: 90%;
-    }
-
-    
-    .contact .map div {
-        width: 60vw;
-    }
-
-    .contact .map iframe {
-        width: 60vw;
-        height: 20vh;
-    }
-
-
-    .contact .info .number1 {
-        font-size: 17px;
-        gap: 3vw;
-    }
-
-    .number1 i{
-        font-size: 25px;
-    }
-
-    .number div a{
-        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-        font-size: 19px;
-    }
-
-    .contact .info {
-        gap: 1.8vh;
-        width: 85%;
-        
-    }
-
-    .contact .info .email{
-        gap: 3vw;
-    }
-
-    .contact .info .email div a{
-        font-size: 18px;
-        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    }
-
-    .contact .info .email div i{
-        margin-bottom: 0.35vh;
-    }
-
-    .contact .info .address {
-        width: 85%;
-        gap: 3vw;
-    }
-
-    .address div i{
-        font-size: 25px;
-    }
-
-    .contact .info .address div a{
-        font-size: 17px;
-        line-height: 1vh;
-        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    } */
-
-    .contactinfo{
-        flex-direction: column;
-        gap: 3rem;
-    }
-
-    .address div i{
-        margin-bottom: 5px;
-    }
-
-    .addhead{
-        font-weight: 700;
-        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    }
-
-    .add{
-        font-size: 20px;
-        font-family: "Baloo Bhai 2", sans-serif;
-    }
-
-    .phoneno{
-        font-size: 20px;
-        font-family: "Baloo Bhai 2", sans-serif;
-    }
-
-    .mail{
-        font-size: 20px;
-        font-family: "Baloo Bhai 2", sans-serif;
-    }
-
-    .map iframe{
-        width: 250px;
-    }
-   
-}

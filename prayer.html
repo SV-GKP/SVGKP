@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prayer Time | SVGKP</title>
+    <meta name="description" content="View congregational prayer times for Satsang Vihar Gorakhpur.">
+    <meta name="keywords" content="Satsang, Gorakhpur, Anukulchandra, prayer time, satsang vihar, Thakur, satsang india, Satsang vihar gorakhpur">
+    <meta name="author" content="Satsang Vihar Gorakhpur">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-xicon" href="logo wo bg.png">
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" xintegrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- Custom Stylesheets -->
+    <link rel="stylesheet" href="style.css"> <!-- Global styles -->
+    <link rel="stylesheet" href="prayer.css"> <!-- Prayer page specific styles -->
+</head>
+<body>
+    <header class="fixed top-0 left-0 w-full bg-gray-900 bg-opacity-95 z-50 shadow-lg">
+        <nav class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-4">
+                <a href="https://www.satsang.org.in" target="_blank" class="flex items-center space-x-2">
+                    <img src="logo.png" alt="Satsang Vihar Gorakhpur Logo" class="h-10 w-10 rounded-full border-2 border-white">
+                    <span class="text-white text-xl font-bold font-baloo-bhai">SATSANG</span>
+                </a>
+            </div>
+            <div class="hidden md:flex items-center space-x-8">
+                <ul class="flex space-x-8">
+                    <li><a href="index.html#about" class="text-white hover:text-orange-300 transition duration-300 font-exo text-lg">About Us</a></li>
+                    <li><a href="prayer.html" class="text-white hover:text-orange-300 transition duration-300 font-exo text-lg">Prayer Time</a></li>
+                    <li><a href="index.html#upcoming-events" class="text-white hover:text-orange-300 transition duration-300 font-exo text-lg">Upcoming Events</a></li>
+                    <li><a href="gallery.html" class="text-white hover:text-orange-300 transition duration-300 font-exo text-lg">Gallery</a></li>
+                    <li><a href="index.html#contact" class="text-white hover:text-orange-300 transition duration-300 font-exo text-lg">Contact Us</a></li>
+                </ul>
+                <button id="dark-mode-toggle" class="text-white text-2xl hover:text-orange-300 transition duration-300 focus:outline-none">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+            <div class="md:hidden flex items-center">
+                <button id="hamburger-menu" class="text-white text-2xl focus:outline-none">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden bg-gray-800 bg-opacity-95 py-4 hidden">
+            <ul class="flex flex-col items-center space-y-4">
+                <li><a href="index.html#about" class="text-white hover:text-orange-300 transition duration-300 font-exo text-lg py-2 block">About Us</a></li>
+                <li><a href="prayer.html" class="text-white hover:text-orange-300 transition duration-300 font-exo text-lg py-2 block">Prayer Time</a></li>
+                <li><a href="index.html#upcoming-events" class="text-white hover:text-orange-300 transition duration-300 font-exo text-lg py-2 block">Upcoming Events</a></li>
+                <li><a href="gallery.html" class="text-white hover:text-orange-300 transition duration-300 font-exo text-lg py-2 block">Gallery</a></li>
+                <li><a href="index.html#contact" class="text-white hover:text-orange-300 transition duration-300 font-exo text-lg py-2 block">Contact Us</a></li>
+                <li>
+                    <button id="dark-mode-toggle-mobile" class="text-white text-2xl hover:text-orange-300 transition duration-300 focus:outline-none py-2 block">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <main class="prayer-main">
+        <section class="py-16 text-center">
+            <h1 class="text-5xl md:text-6xl font-bold text-gray-900 dark:text-gray-100 font-cambria mb-4">Congregational Prayer</h1>
+            <p class="text-xl md:text-2xl text-gray-700 dark:text-gray-300 font-baloo-bhai">GORAKHPUR, UTTAR PRADESH</p>
+            <p class="text-lg md:text-xl text-gray-600 dark:text-gray-400 font-baloo-bhai">(EASTERN UTTAR PRADESH)</p>
+        </section>
+
+        <section class="py-12 bg-gray-50 dark:bg-gray-800 rounded-lg shadow-lg mx-auto max-w-5xl px-4">
+            <div class="text-center mb-8">
+                <select id="month-selector" class="p-3 text-lg border border-orange-300 rounded-full bg-white dark:bg-gray-700 text-gray-800 dark:text-gray-100 cursor-pointer transition duration-300 hover:border-orange-500 focus:outline-none focus:ring-2 focus:ring-orange-500">
+                    <option value="">-- Select Month --</option>
+                    <option value="january">January</option>
+                    <option value="february">February</option>
+                    <option value="march">March</option>
+                    <option value="april">April</option>
+                    <option value="may">May</option>
+                    <option value="june">June</option>
+                    <option value="july">July</option>
+                    <option value="august">August</option>
+                    <option value="september">September</option>
+                    <option value="october">October</option>
+                    <option value="november">November</option>
+                    <option value="december">December</option>
+                </select>
+            </div>
+
+            <div id="current-prayer-times-section" class="flex flex-col items-center mb-10">
+                <div class="flex flex-row justify-center items-center gap-8 md:gap-16 bg-gray-900 p-6 rounded-lg shadow-xl">
+                    <div class="flex flex-col items-center">
+                        <img src="icons8-sunrise.svg" alt="Sunrise Icon" class="w-20 h-20 mb-2">
+                        <span class="text-2xl font-semibold text-orange-300 font-cambria">Morning</span>
+                        <span id="current-morning-time" class="text-4xl font-orbitron text-white mt-2">06:15</span>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <img src="icons8-sunset.svg" alt="Sunset Icon" class="w-20 h-20 mb-2">
+                        <span class="text-2xl font-semibold text-orange-300 font-cambria">Evening</span>
+                        <span id="current-evening-time" class="text-4xl font-orbitron text-white mt-2">05:06</span>
+                    </div>
+                </div>
+                <div id="current-month-heading" class="text-2xl md:text-3xl font-semibold text-gray-800 dark:text-gray-200 mt-6 font-trebuchet">November Prayer Time</div>
+            </div>
+
+            <div id="prayer-times-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Prayer times for each month will be dynamically loaded here -->
+                <div id="january" class="prayer-month-card bg-gray-800 p-5 rounded-lg shadow-md flex justify-between items-center">
+                    <span class="text-xl font-semibold text-white">January</span>
+                    <div class="flex flex-col items-end">
+                        <span class="text-lg text-orange-300">06:44 (Morning)</span>
+                        <span class="text-lg text-orange-300">05:26 (Evening)</span>
+                    </div>
+                </div>
+                <div id="february" class="prayer-month-card bg-gray-800 p-5 rounded-lg shadow-md flex justify-between items-center">
+                    <span class="text-xl font-semibold text-white">February</span>
+                    <div class="flex flex-col items-end">
+                        <span class="text-lg text-orange-300">06:30 (Morning)</span>
+                        <span class="text-lg text-orange-300">05:47 (Evening)</span>
+                    </div>
+                </div>
+                <div id="march" class="prayer-month-card bg-gray-800 p-5 rounded-lg shadow-md flex justify-between items-center">
+                    <span class="text-xl font-semibold text-white">March</span>
+                    <div class="flex flex-col items-end">
+                        <span class="text-lg text-orange-300">06:03 (Morning)</span>
+                        <span class="text-lg text-orange-300">06:05 (Evening)</span>
+                    </div>
+                </div>
+                <div id="april" class="prayer-month-card bg-gray-800 p-5 rounded-lg shadow-md flex justify-between items-center">
+                    <span class="text-xl font-semibold text-white">April</span>
+                    <div class="flex flex-col items-end">
+                        <span class="text-lg text-orange-300">05:31 (Morning)</span>
+                        <span class="text-lg text-orange-300">06:19 (Evening)</span>
+                    </div>
+                </div>
+                <div id="may" class="prayer-month-card bg-gray-800 p-5 rounded-lg shadow-md flex justify-between items-center">
+                    <span class="text-xl font-semibold text-white">May</span>
+                    <div class="flex flex-col items-end">
+                        <span class="text-lg text-orange-300">05:08 (Morning)</span>
+                        <span class="text-lg text-orange-300">06:36 (Evening)</span>
+                    </div>
+                </div>
+                <div id="june" class="prayer-month-card bg-gray-800 p-5 rounded-lg shadow-md flex justify-between items-center">
+                    <span class="text-xl font-semibold text-white">June</span>
+                    <div class="flex flex-col items-end">
+                        <span class="text-lg text-orange-300">05:03 (Morning)</span>
+                        <span class="text-lg text-orange-300">06:49 (Evening)</span>
+                    </div>
+                </div>
+                <div id="july" class="prayer-month-card bg-gray-800 p-5 rounded-lg shadow-md flex justify-between items-center">
+                    <span class="text-xl font-semibold text-white">July</span>
+                    <div class="flex flex-col items-end">
+                        <span class="text-lg text-orange-300">05:13 (Morning)</span>
+                        <span class="text-lg text-orange-300">06:49 (Evening)</span>
+                    </div>
+                </div>
+                <div id="august" class="prayer-month-card bg-gray-800 p-5 rounded-lg shadow-md flex justify-between items-center">
+                    <span class="text-xl font-semibold text-white">August</span>
+                    <div class="flex flex-col items-end">
+                        <span class="text-lg text-orange-300">05:28 (Morning)</span>
+                        <span class="text-lg text-orange-300">06:30 (Evening)</span>
+                    </div>
+                </div>
+                <div id="september" class="prayer-month-card bg-gray-800 p-5 rounded-lg shadow-md flex justify-between items-center">
+                    <span class="text-xl font-semibold text-white">September</span>
+                    <div class="flex flex-col items-end">
+                        <span class="text-lg text-orange-300">05:42 (Morning)</span>
+                        <span class="text-lg text-orange-300">05:59 (Evening)</span>
+                    </div>
+                </div>
+                <div id="october" class="prayer-month-card bg-gray-800 p-5 rounded-lg shadow-md flex justify-between items-center">
+                    <span class="text-xl font-semibold text-white">October</span>
+                    <div class="flex flex-col items-end">
+                        <span class="text-lg text-orange-300">05:56 (Morning)</span>
+                        <span class="text-lg text-orange-300">05:27 (Evening)</span>
+                    </div>
+                </div>
+                <div id="november" class="prayer-month-card bg-gray-800 p-5 rounded-lg shadow-md flex justify-between items-center">
+                    <span class="text-xl font-semibold text-white">November</span>
+                    <div class="flex flex-col items-end">
+                        <span class="text-lg text-orange-300">06:15 (Morning)</span>
+                        <span class="text-lg text-orange-300">05:06 (Evening)</span>
+                    </div>
+                </div>
+                <div id="december" class="prayer-month-card bg-gray-800 p-5 rounded-lg shadow-md flex justify-between items-center">
+                    <span class="text-xl font-semibold text-white">December</span>
+                    <div class="flex flex-col items-end">
+                        <span class="text-lg text-orange-300">06:36 (Morning)</span>
+                        <span class="text-lg text-orange-300">05:07 (Evening)</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 bg-white dark:bg-gray-900">
+            <div class="container mx-auto px-4">
+                <h2 class="text-4xl md:text-5xl font-bold text-center text-orange-700 dark:text-orange-300 mb-12 font-cambria">Learn More Through Videos</h2>
+                <div class="flex flex-col md:flex-row justify-center items-center gap-8">
+                    <div class="w-full md:w-1/2 lg:w-1/3 bg-gray-900 p-4 rounded-lg shadow-xl border-4 border-orange-300">
+                        <iframe class="w-full aspect-video rounded-md" src="https://www.youtube.com/embed/KUVEpk7D7Ec?si=hu5FY6Du4GfOToPn"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <div class="w-full md:w-1/2 lg:w-1/3 bg-gray-900 p-4 rounded-lg shadow-xl border-4 border-orange-300">
+                        <iframe class="w-full aspect-video rounded-md" src="https://www.youtube.com/embed/0NdzP8gPPx8?si=EIhgi6aZq9tbH1Zo"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <div class="w-full md:w-1/2 lg:w-1/3 bg-gray-900 p-4 rounded-lg shadow-xl border-4 border-orange-300">
+                        <iframe class="w-full aspect-video rounded-md" src="https://www.youtube.com/embed/OEEQGhqWHeg?si=BQZnceQqrtNNozD3"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-900 dark:bg-gray-950 py-10">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-8">
+            <div class="flex flex-col items-center md:items-start">
+                <a href="https://www.satsang.org.in" target="_blank" class="flex items-center space-x-3">
+                    <img src="logo.png" alt="Satsang Logo" class="h-12 w-12 rounded-full border-2 border-orange-300">
+                    <span class="text-orange-300 text-2xl font-bold font-baloo-bhai">SATSANG</span>
+                </a>
+                <p class="text-gray-400 text-sm mt-2">© 2024 Satsang Vihar Gorakhpur. All rights reserved.</p>
+            </div>
+
+            <div class="flex flex-col items-center">
+                <h4 class="text-orange-300 text-xl font-bold mb-4 font-trebuchet">Follow Us</h4>
+                <ul class="flex space-x-6">
+                    <li><a href="https://www.facebook.com/S.V.Gkp/?locale=hi_IN" target="_blank" class="text-white hover:text-blue-500 transition duration-300"><i class="fa-brands fa-facebook text-3xl"></i></a></li>
+                    <li><a href="https://www.instagram.com/s.v.gkp/?hl=en" target="_blank" class="text-white hover:text-pink-500 transition duration-300"><i class="fa-brands fa-instagram text-3xl"></i></a></li>
+                    <li><a href="https://x.com/i/flow/login?redirect_after_login=%2Fsvgkpofficial" target="_blank" class="text-white hover:text-gray-400 transition duration-300"><i class="fa-brands fa-x-twitter text-3xl"></i></a></li>
+                    <li><a href="https://www.youtube.com/channel/UCK7qx1OpU3QwbaXpxarNMzA" target="_blank" class="text-white hover:text-red-500 transition duration-300"><i class="fa-brands fa-youtube text-3xl"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="prayer.js"></script>
+</body>
+</html>

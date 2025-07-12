@@ -1,0 +1,21 @@
+[
+    {
+        "id": "event-2025-07",
+        "title": "Plantation Event",
+        "date": "2025-07-11",
+        "category": "Casual",
+        "thumbnail": {
+            "type": "image",
+            "src": "Gallery\\Plantation\\20250711_183546.jpg"
+        },
+        "media": [
+            { "type": "image", "src": "Gallery\\Plantation\\Santosh da.jpg" },
+            { "type": "image", "src": "Gallery\\Plantation\\20250711_173041.jpg" },
+            { "type": "image", "src": "Gallery\\Plantation\\20250711_175309.jpg" },
+            { "type": "image", "src": "Gallery\\Plantation\\20250711_181206.jpg" },
+            { "type": "image", "src": "Gallery\\Plantation\\20250711_181604.jpg" },
+            { "type": "image", "src": "Gallery\\Plantation\\20250711_175309.jpg" },
+            { "type": "image", "src": "Gallery\\Plantation\\20250711_183029.jpg" }
+        ]
+    }
+]

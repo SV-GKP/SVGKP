@@ -1,0 +1,326 @@
+/* Import common styles (if needed, otherwise copy relevant sections from style.css) */
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400..800&family=Exo:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@400..900&family=Inter:wght@300;400;500;600;700&family=Cambria&family=Impact&family=Trebuchet+MS&display=swap');
+
+/* Tailwind CSS CDN (if not already in style.css or if this is a standalone page) */
+@import url('https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css');
+
+/* Custom Font Definitions (re-import if not using global style.css) */
+.font-baloo-bhai { font-family: 'Baloo Bhai 2', sans-serif; }
+.font-exo { font-family: 'Exo', sans-serif; }
+.font-orbitron { font-family: 'Orbitron', sans-serif; }
+.font-inter { font-family: 'Inter', sans-serif; }
+.font-cambria { font-family: 'Cambria', serif; }
+.font-impact { font-family: 'Impact', sans-serif; }
+.font-trebuchet { font-family: 'Trebuchet MS', sans-serif; }
+
+/* Main content area padding to clear fixed header */
+.gallery-main {
+    padding-top: 100px; /* Adjust based on header height */
+    padding-bottom: 50px;
+}
+
+/* Dark mode specific styles for gallery */
+body.dark-mode .gallery-main {
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+}
+
+body.dark-mode h1, body.dark-mode h2 {
+    color: #e4b784; /* Accent color for headings in dark mode */
+}
+
+body.dark-mode .text-gray-900 {
+    color: #e0e0e0;
+}
+
+body.dark-mode .text-gray-700 {
+    color: #b0b0b0;
+}
+
+body.dark-mode .text-gray-600 {
+    color: #909090;
+}
+
+body.dark-mode .bg-gray-50 {
+    background-color: #2a2a2a;
+}
+
+body.dark-mode .bg-white {
+    background-color: #1a1a1a;
+}
+
+body.dark-mode #search-input,
+body.dark-mode #date-filter,
+body.dark-mode #category-filter {
+    background-color: #333;
+    color: #e0e0e0;
+    border-color: #555;
+}
+
+body.dark-mode #search-input::placeholder {
+    color: #b0b0b0;
+}
+
+body.dark-mode .gallery-card {
+    background-color: #2a2a2a;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+body.dark-mode .gallery-card h3,
+body.dark-mode .gallery-card p {
+    color: #e0e0e0;
+}
+
+body.dark-mode .gallery-card p {
+    color: #b0b0b0;
+}
+
+/* Lightbox container - initially hidden */
+#media-lightbox {
+    display: none; /* Changed from flex to none */
+    position: fixed; /* Ensure it covers the whole viewport */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.95);
+    z-index: 99999; /* Ensure it's on top */
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: center;
+    align-items: center;
+    padding: 1rem; /* Add overall padding to give space for controls */
+    box-sizing: border-box; /* Include padding in width/height */
+}
+
+/* Lightbox active state (shown by JS) */
+#media-lightbox.active {
+    display: flex; /* Show when active */
+}
+
+body.dark-mode .media-lightbox span.absolute,
+body.dark-mode .media-lightbox button {
+    color: #e0e0e0;
+}
+
+body.dark-mode .media-lightbox button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Gallery Card Specific Styles */
+.gallery-card {
+    background-color: white;
+    border-radius: 0.75rem; /* rounded-xl */
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Ensures info is at bottom */
+}
+
+.gallery-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.gallery-card img,
+.gallery-card video {
+    width: 100%;
+    height: 200px; /* Fixed height for thumbnails */
+    object-fit: cover;
+    display: block;
+}
+
+.gallery-card .video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    background-color: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 3rem;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.gallery-card:hover .video-overlay {
+    opacity: 1;
+}
+
+.gallery-card-info {
+    padding: 1.25rem; /* p-5 */
+    text-align: center;
+}
+
+.gallery-card-info h3 {
+    font-size: 1.25rem; /* text-xl */
+    font-weight: 600; /* font-semibold */
+    margin-bottom: 0.5rem; /* mb-2 */
+    color: #333;
+}
+
+.gallery-card-info p {
+    font-size: 0.875rem; /* text-sm */
+    color: #666;
+}
+
+/* Lightbox styles */
+#lightbox-media-container {
+    width: 100%; /* Ensure it takes full width of its flex parent */
+    height: 100%; /* Ensure it takes full height of its flex parent */
+    display: flex; /* Make it a flex container */
+    justify-content: center; /* Center media horizontally */
+    align-items: center; /* Center media vertically */
+}
+
+#lightbox-media-container img,
+#lightbox-media-container video {
+    max-width: 100%;
+    max-height: 100%; /* Fill container while respecting aspect ratio */
+    object-fit: contain;
+    border-radius: 0.5rem;
+}
+
+/* Custom select arrow */
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%20viewBox%3D%220%200%20292.4%20292.4%22%3E%3Cpath%20fill%3D%22%23000000%22%20d%3D%22M287%2C197.9l-11.4%2C11.4l-123.6%2C-123.6l-123.6%2C123.6l-11.4%2C-11.4l135%2C-135L287%2C197.9z%22%2F%3E%3C%2Fsvg%3E');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 12px;
+    padding-right: 50px;
+    min-width: 150px;
+}
+
+body.dark-mode select {
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%20viewBox%3D%220%200%20292.4%20292.4%22%3E%3Cpath%20fill%3D%22%23FFFFFF%22%20d%3D%22M287%2C197.9l-11.4%2C11.4l-123.6%2C-123.6l-123.6%2C123.6l-11.4%2C-11.4l135%2C-135L287%2C197.9z%22%2F%3E%3C%2Fsvg%3E');
+}
+
+/* Responsive adjustments for lightbox controls */
+@media (max-width: 768px) {
+    /* Main lightbox container should be relative to allow absolute positioning of controls */
+    #media-lightbox {
+        /* Already defined above, but ensure no conflicting styles */
+    }
+
+    /* Close button */
+    #close-lightbox-btn { /* Target by ID for specificity */
+        top: 1rem;
+        right: 1rem;
+        width: 56px; /* Fixed size for easy tapping */
+        height: 56px;
+        font-size: 2.5rem; /* Larger 'x' */
+        z-index: 100000; /* Ensure it's on top */
+        /* Remove padding as width/height are fixed */
+        padding: 0; 
+    }
+
+    /* Media container within lightbox */
+    #lightbox-media-container {
+        flex-grow: 1; /* Allow it to take available space */
+        width: 100%;
+        max-height: calc(100vh - 120px); /* Adjust max-height to account for header/footer space */
+        margin-top: 60px; /* Space for the close button */
+        margin-bottom: 60px; /* Space for the download button */
+    }
+
+    /* Navigation arrows */
+    #prev-media,
+    #next-media {
+        top: 50%; /* Center vertically relative to media container */
+        transform: translateY(-50%);
+        width: 48px; /* Fixed size */
+        height: 48px;
+        font-size: 2rem; /* Larger icon */
+        z-index: 100001; /* Ensure arrows are above media */
+        padding: 0; /* Remove padding as width/height are fixed */
+    }
+    #prev-media {
+        left: 1rem; /* Position from left edge of media container */
+        margin-left: 0; /* Remove extra margin */
+    }
+    #next-media {
+        right: 1rem; /* Position from right edge of media container */
+        margin-right: 0; /* Remove extra margin */
+    }
+
+    /* Download button */
+    #download-media {
+        bottom: 1rem; /* Position from bottom */
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 1rem;
+        padding: 0.75rem 1.5rem;
+        z-index: 100001; /* Ensure it's above media */
+    }
+}
+
+
+/* Responsive adjustments (general) */
+@media (max-width: 768px) {
+    .gallery-main {
+        padding-top: 80px;
+    }
+    h1 {
+        font-size: 3rem;
+    }
+    h2 {
+        font-size: 2.5rem;
+    }
+    .text-xl { font-size: 1.125rem; }
+    .text-lg { font-size: 1rem; }
+    .text-2xl { font-size: 1.25rem; }
+
+    .flex-col.md\:flex-row {
+        flex-direction: column;
+    }
+    .gap-6.mb-8 {
+        gap: 1.5rem;
+    }
+    .w-full.md\:w-1\/2 {
+        width: 100%;
+    }
+    .flex.gap-4.w-full.md\:w-auto {
+        width: 100%;
+        justify-content: space-around;
+    }
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-main {
+        padding-top: 70px;
+    }
+    h1 {
+        font-size: 2.5rem;
+    }
+    h2 {
+        font-size: 2rem;
+    }
+    .text-xl { font-size: 1rem; }
+    .text-lg { font-size: 0.875rem; }
+    .text-2xl { font-size: 1.1rem; }
+
+    .gallery-card-info h3 {
+        font-size: 1.1rem;
+    }
+    .gallery-card-info p {
+        font-size: 0.8rem;
+    }
+
+    #search-input, #date-filter, #category-filter {
+        font-size: 0.9rem;
+        padding: 10px 12px;
+    }
+}

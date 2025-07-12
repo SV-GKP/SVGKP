@@ -1,0 +1,217 @@
+/* Import common styles (if needed, otherwise copy relevant sections from style.css) */
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400..800&family=Exo:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@400..900&family=Inter:wght@300;400;500;600;700&family=Cambria&family=Impact&family=Trebuchet+MS&display=swap');
+
+/* Tailwind CSS CDN (if not already in style.css or if this is a standalone page) */
+@import url('https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css');
+
+/* Custom Font Definitions (re-import if not using global style.css) */
+.font-baloo-bhai { font-family: 'Baloo Bhai 2', sans-serif; }
+.font-exo { font-family: 'Exo', sans-serif; }
+.font-orbitron { font-family: 'Orbitron', sans-serif; }
+.font-inter { font-family: 'Inter', sans-serif; }
+.font-cambria { font-family: 'Cambria', serif; }
+.font-impact { font-family: 'Impact', sans-serif; }
+.font-trebuchet { font-family: 'Trebuchet MS', sans-serif; }
+
+/* Main content area padding to clear fixed header */
+.prayer-main {
+    padding-top: 100px; /* Adjust based on header height */
+    padding-bottom: 50px;
+}
+
+/* Dark mode specific styles for prayer page */
+body.dark-mode .prayer-main {
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+}
+
+body.dark-mode h1, body.dark-mode h2 {
+    color: #e4b784; /* Accent color for headings in dark mode */
+}
+
+body.dark-mode .text-gray-900 {
+    color: #e0e0e0;
+}
+
+body.dark-mode .text-gray-700 {
+    color: #b0b0b0;
+}
+
+body.dark-mode .text-gray-600 {
+    color: #909090;
+}
+
+body.dark-mode .bg-gray-50 {
+    background-color: #2a2a2a;
+}
+
+body.dark-mode .bg-gray-900 {
+    background-color: #333;
+}
+
+body.dark-mode .prayer-month-card {
+    background-color: #2a2a2a;
+    border: 1px solid #444;
+}
+
+/* Ensure all spans inside prayer-month-card have consistent color in dark mode */
+body.dark-mode .prayer-month-card span {
+    color: #e0e0e0;
+}
+
+body.dark-mode .prayer-month-card .text-orange-300 {
+    color: #e4b784; /* Keep accent color */
+}
+
+body.dark-mode .highlight-month {
+    background-color: #4a4a4a; /* Darker highlight */
+    box-shadow: 0 0 15px rgba(228, 183, 132, 0.7);
+}
+
+body.dark-mode #month-selector {
+    background-color: #333;
+    color: #e0e0e0;
+    border-color: #e4b784;
+}
+
+body.dark-mode #month-selector:hover {
+    background-color: #444;
+}
+
+/* Prayer Times Grid */
+#prayer-times-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px; /* Tailwind gap-6 */
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.prayer-month-card {
+    background-color: #f0f0f0; /* Light background for cards */
+    border: 1px solid #e0e0e0;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.prayer-month-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.prayer-month-card span:first-child {
+    font-weight: bold;
+    font-size: 1.25rem; /* text-xl */
+    color: #333; /* Dark color for month name in light mode */
+}
+
+/* Apply consistent styling to all time spans within the card */
+.prayer-month-card .flex-col span {
+    font-size: 1.1rem; /* Slightly smaller than month name, but consistent */
+    color: #666; /* Darker color for times in light mode */
+    font-family: 'Orbitron', sans-serif; /* Apply Orbitron font */
+    font-weight: 500; /* Consistent weight */
+}
+
+/* Specific styles for "Morning" and "Evening" titles in the main current prayer time card */
+#current-prayer-times-section .bg-gray-900 .font-cambria {
+    color: #e4b784; /* A clear, visible orange-ish color for both modes */
+}
+
+body.dark-mode #current-prayer-times-section .bg-gray-900 .font-cambria {
+    color: #e4b784; /* Ensure it stays the same clear orange in dark mode */
+}
+
+
+/* Highlight for current/selected month */
+.highlight-month {
+    background-color: #e4b784; /* Accent color */
+    color: white !important; /* Ensure text is white */
+    transform: scale(1.02);
+    box-shadow: 0 0 15px rgba(228, 183, 132, 0.5);
+}
+
+.highlight-month span {
+    color: white !important; /* Ensure all spans inside are white when highlighted */
+}
+
+/* Month Selector */
+#month-selector {
+    /* Custom styles for appearance */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%20viewBox%3D%220%200%20292.4%20292.4%22%3E%3Cpath%20fill%3D%22%23000000%22%20d%3D%22M287%2C197.9l-11.4%2C11.4l-123.6%2C-123.6l-123.6%2C123.6l-11.4%2C-11.4l135%2C-135L287%2C197.9z%22%2F%3E%3C%2Fsvg%3E');
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 12px;
+    padding-right: 35px; /* Make space for the custom arrow */
+}
+
+body.dark-mode select {
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%20viewBox%3D%220%200%20292.4%20292.4%22%3E%3Cpath%20fill%3D%22%23FFFFFF%22%20d%3D%22M287%2C197.9l-11.4%2C11.4l-123.6%2C-123.6l-123.6%2C123.6l-11.4%2C-11.4l135%2C-135L287%2C197.9z%22%2F%3E%3C%2Fsvg%3E');
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .prayer-main {
+        padding-top: 80px;
+    }
+    h1 {
+        font-size: 3rem;
+    }
+    .text-xl { font-size: 1.125rem; }
+    .text-lg { font-size: 1rem; }
+    .text-2xl { font-size: 1.25rem; }
+    .text-4xl { font-size: 2.25rem; }
+
+    .flex-col.md\:flex-row {
+        flex-direction: column;
+    }
+    .gap-8.md\:gap-16 {
+        gap: 2rem;
+    }
+    #prayer-times-grid {
+        grid-template-columns: 1fr;
+        padding: 10px;
+    }
+    .prayer-month-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    .prayer-month-card span:not(:first-child) {
+        text-align: left;
+    }
+    .prayer-month-card .flex-col.items-end {
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 480px) {
+    .prayer-main {
+        padding-top: 70px; /* Adjust for smaller header on mobile */
+    }
+    h1 {
+        font-size: 2.5rem;
+    }
+    .text-xl { font-size: 1rem; }
+    .text-lg { font-size: 0.875rem; }
+    .text-2xl { font-size: 1.1rem; }
+    .text-4xl { font-size: 2rem; }
+
+    #month-selector {
+        font-size: 0.9rem;
+        padding: 10px 12px;
+    }
+    .prayer-month-card .flex-col span {
+        font-size: 1rem; /* Adjust font size for mobile */
+    }
+}
