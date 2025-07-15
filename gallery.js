@@ -102,10 +102,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
             let thumbnailHtml = '';
             if (event.thumbnail.type === 'image') {
-                thumbnailHtml = `<img src="${event.thumbnail.src}" alt="${event.title}" class="gallery-card-thumbnail">`;
+                thumbnailHtml = `<img src="${event.thumbnail.src}" alt="${event.title}" class="gallery-card-thumbnail" loading="lazy">`;
             } else if (event.thumbnail.type === 'video') {
                 thumbnailHtml = `
-                    <video muted preload="metadata" class="gallery-card-thumbnail">
+                    <video muted preload="none" class="gallery-card-thumbnail">
                         <source src="${event.thumbnail.src}#t=0.5" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
