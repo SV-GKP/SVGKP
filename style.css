@@ -72,6 +72,13 @@ body.dark-mode .border-gray-900 {
     border-color: #555;
 }
 
+/* Added styles for the Revered Personalities section text */
+body.dark-mode .text-black, 
+body.dark-mode .py-16 .text-black,
+body.dark-mode .py-16 .text-xl {
+    color: #e0e0e0; /* Make text visible in dark mode */
+}
+
 /* Specific styles for the campus slider (if not fully handled by Tailwind) */
 #campus-slider {
     display: flex;
@@ -153,4 +160,3 @@ body.dark-mode .border-gray-900 {
     .text-4xl { font-size: 2.25rem; }
     .text-5xl { font-size: 2.5rem; }
 }
-

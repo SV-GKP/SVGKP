@@ -109,7 +109,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         function startAutoSlide() {
-            autoSlideInterval = setInterval(goToNextSlide, 5000); // Change slide every 5 seconds
+            autoSlideInterval = setInterval(goToNextSlide, 10000); // Change slide every 5 seconds
         }
 
         function resetAutoSlide() {
@@ -165,7 +165,16 @@ document.addEventListener("DOMContentLoaded", () => {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
             const events = await response.json();
-            renderEvents(events);
+            
+            // Filter out past events
+            const now = new Date();
+            const upcomingEvents = events.filter(event => {
+                const eventDate = new Date(event.date);
+                // Compare only the dates, ignoring time
+                return eventDate.setHours(0, 0, 0, 0) >= now.setHours(0, 0, 0, 0);
+            });
+
+            renderEvents(upcomingEvents);
         } catch (error) {
             console.error("Failed to load events:", error);
             if (eventsContainer) eventsContainer.innerHTML = '<p class="text-center text-red-500 dark:text-red-400">Failed to load events. Please try again later.</p>';
@@ -187,9 +196,7 @@ document.addEventListener("DOMContentLoaded", () => {
             eventCard.innerHTML = `
                 <h3 class="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-2 font-cambria">${event.title}</h3>
                 <p class="text-orange-600 dark:text-orange-300 mb-2 font-exo"><i class="fas fa-calendar-alt mr-2"></i>${event.date}</p>
-                <p class="text-gray-700 dark:text-gray-300 mb-4 font-baloo-bhai">${event.place}</p> <!-- Changed from event.description to event.place -->
-                <!-- Removed the <a> tag as 'link' property is not in events.json -->
-            `;
+                <p class="text-gray-700 dark:text-gray-300 mb-4 font-baloo-bhai">${event.place}</p> `;
             if (eventsContainer) eventsContainer.appendChild(eventCard);
         });
     }
@@ -218,6 +225,10 @@ document.addEventListener("DOMContentLoaded", () => {
         function goToPrevPersonalitySlide() {
             currentPersonalitySlide = (currentPersonalitySlide - 1 + slides.length) % slides.length;
             updatePersonalitySlideshowPosition();
+        }
+
+        function startAutoSlide() {
+            autoSlideInterval = setInterval(goToNextSlide, 10000); // Change slide every 5 seconds
         }
 
         function createPersonalityDots() {
