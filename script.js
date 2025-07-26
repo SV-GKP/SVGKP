@@ -253,10 +253,10 @@ document.addEventListener("DOMContentLoaded", () => {
                 const dots = personalitiesDotsContainer.querySelectorAll('span');
                 dots.forEach((dot, index) => {
                     if (index === currentPersonalitySlide) {
-                        dot.classList.add('bg-white'); // Changed to white for active dot
+                        dot.classList.add('bg-black'); // Changed to white for active dot
                         dot.classList.remove('bg-gray-200');
                     } else {
-                        dot.classList.remove('bg-white'); // Changed to white for inactive dot
+                        dot.classList.remove('bg-black'); // Changed to white for inactive dot
                         dot.classList.add('bg-gray-200');
                     }
                 });
