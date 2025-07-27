@@ -166,11 +166,9 @@ document.addEventListener("DOMContentLoaded", () => {
             }
             const events = await response.json();
             
-            // Filter out past events
             const now = new Date();
             const upcomingEvents = events.filter(event => {
                 const eventDate = new Date(event.date);
-                // Compare only the dates, ignoring time
                 return eventDate.setHours(0, 0, 0, 0) >= now.setHours(0, 0, 0, 0);
             });
 
@@ -196,7 +194,8 @@ document.addEventListener("DOMContentLoaded", () => {
             eventCard.innerHTML = `
                 <h3 class="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-2 font-cambria">${event.title}</h3>
                 <p class="text-orange-600 dark:text-orange-300 mb-2 font-exo"><i class="fas fa-calendar-alt mr-2"></i>${event.date}</p>
-                <p class="text-gray-700 dark:text-gray-300 mb-4 font-baloo-bhai">${event.place}</p> `;
+                <p class="text-gray-700 dark:text-gray-300 mb-4 font-baloo-bhai"><i class="fas fa-clock mr-2"></i>${event.time}</p> <p class="text-gray-700 dark:text-gray-300 mb-4 font-baloo-bhai">${event.place}</p>
+            `;
             if (eventsContainer) eventsContainer.appendChild(eventCard);
         });
     }
