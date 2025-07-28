@@ -1,16 +1,14 @@
 [
   {
-    "title": "July Monthly Satsang",
-    "date": "2025-07-20",
-    "time": "10:00 AM - 12:00 PM",
-    "place": "Satsang Vihar Gorakhpur",
-    "image": "campus5.jpg"
-  },
-  {
     "title": "Sree Sree Borma's 132nd Janma Diwas",
     "date": "2025-07-30",
     "time": "05:00 PM onwards",
-    "place": "Satsang Vihar Gorakhpur",
-    "image": "boroma_1.png"
+    "place": "Satsang Vihar Gorakhpur"
+  },
+  {
+    "title": "August Monthly Satsang",
+    "date": "2025-08-17",
+    "time": "11:00 AM onwards",
+    "place": "Satsang Vihar Gorakhpur"
   }
 ]

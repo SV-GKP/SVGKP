@@ -127,6 +127,39 @@ body.dark-mode .py-16 .text-xl {
     max-width: 1200px; /* Limit max width for better readability */
 }
 
+/* animation when pop up shows */
+@keyframes fadeInScale {
+    0% {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.animate-fadeInScale {
+    animation: fadeInScale 0.5s ease-out forwards;
+}
+
+/* animation when pop up closes */
+@keyframes fadeOutScale {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+}
+
+.animate-fadeOutScale {
+    animation: fadeOutScale 0.3s ease forwards;
+}
+
+
 /* Adjustments for smaller screens */
 @media (max-width: 768px) {
     .hero-section h1 {
