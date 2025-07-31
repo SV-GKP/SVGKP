@@ -1,94 +1,94 @@
 document.addEventListener("DOMContentLoaded", () => {
     // --- Popup Notice Logic ---
-const popup = document.getElementById("popup-notice");
-const closeBtn = document.getElementById("close-popup");
+// const popup = document.getElementById("popup-notice");
+// const closeBtn = document.getElementById("close-popup");
 
-// Show popup every time page loads
-if (popup) {
-    popup.classList.remove("hidden");
-}
+// // Show popup every time page loads
+// if (popup) {
+//     popup.classList.remove("hidden");
+// }
 
-if (closeBtn) {
-    closeBtn.addEventListener("click", () => {
-        const popupBox = document.getElementById("popup-box");
-if (popupBox) {
-    popupBox.classList.add("animate-fadeOutScale");
+// if (closeBtn) {
+//     closeBtn.addEventListener("click", () => {
+//         const popupBox = document.getElementById("popup-box");
+// if (popupBox) {
+//     popupBox.classList.add("animate-fadeOutScale");
 
-    // Wait for animation to finish, then hide
-    setTimeout(() => {
-        popup.classList.add("hidden");
-        popupBox.classList.remove("animate-fadeOutScale"); // reset for future use
-    }, 300); // match animation duration
-}
-    });
-}
+//     // Wait for animation to finish, then hide
+//     setTimeout(() => {
+//         popup.classList.add("hidden");
+//         popupBox.classList.remove("animate-fadeOutScale"); // reset for future use
+//     }, 300); // match animation duration
+// }
+//     });
+// }
 
-// Close popup when clicking outside the image box
-popup.addEventListener("click", (event) => {
-    const popupBox = document.getElementById("popup-box");
-    if (popupBox && !popupBox.contains(event.target)) {
-        const popupBox = document.getElementById("popup-box");
-if (popupBox) {
-    popupBox.classList.add("animate-fadeOutScale");
+// // Close popup when clicking outside the image box
+// popup.addEventListener("click", (event) => {
+//     const popupBox = document.getElementById("popup-box");
+//     if (popupBox && !popupBox.contains(event.target)) {
+//         const popupBox = document.getElementById("popup-box");
+// if (popupBox) {
+//     popupBox.classList.add("animate-fadeOutScale");
 
-    // Wait for animation to finish, then hide
-    setTimeout(() => {
-        popup.classList.add("hidden");
-        popupBox.classList.remove("animate-fadeOutScale"); // reset for future use
-    }, 300); // match animation duration
-}
-    }
-});
+//     // Wait for animation to finish, then hide
+//     setTimeout(() => {
+//         popup.classList.add("hidden");
+//         popupBox.classList.remove("animate-fadeOutScale"); // reset for future use
+//     }, 300); // match animation duration
+// }
+//     }
+// });
 
-if (popup) {
-    setTimeout(() => {
-        popup.classList.remove("hidden");
-    }, 300);
-}
+// if (popup) {
+//     setTimeout(() => {
+//         popup.classList.remove("hidden");
+//     }, 300);
+// }
 
-// When someone clicks on that image
-const popupImageLink = document.querySelector("#popup-box a");
+// // When someone clicks on that image
+// const popupImageLink = document.querySelector("#popup-box a");
 
-if (popupImageLink) {
-    popupImageLink.addEventListener("click", () => {
-        const popupBox = document.getElementById("popup-box");
-        if (popupBox) {
-            popupBox.classList.add("animate-fadeOutScale");
-            setTimeout(() => {
-                popup.classList.add("hidden");
-                popupBox.classList.remove("animate-fadeOutScale");
-            }, 300);
-        }
-    });
-}
+// if (popupImageLink) {
+//     popupImageLink.addEventListener("click", () => {
+//         const popupBox = document.getElementById("popup-box");
+//         if (popupBox) {
+//             popupBox.classList.add("animate-fadeOutScale");
+//             setTimeout(() => {
+//                 popup.classList.add("hidden");
+//                 popupBox.classList.remove("animate-fadeOutScale");
+//             }, 300);
+//         }
+//     });
+// }
 
-// --- Countdown Timer Logic ---
-const countdownElement = document.getElementById("countdown");
+// // --- Countdown Timer Logic ---
+// const countdownElement = document.getElementById("countdown");
 
-// Set your event date/time (example: Boroma's Janma Diwas)
-const eventDate = new Date("2025-07-30T17:00:00");
+// // Set your event date/time (example: Boroma's Janma Diwas)
+// const eventDate = new Date("2025-07-30T17:00:00");
 
-function updateCountdown() {
-    const now = new Date();
-    const diff = eventDate - now;
+// function updateCountdown() {
+//     const now = new Date();
+//     const diff = eventDate - now;
 
-    if (diff <= 0) {
-        countdownElement.textContent = "The event has started!";
-        return;
-    }
+//     if (diff <= 0) {
+//         countdownElement.textContent = "The event has started!";
+//         return;
+//     }
 
-    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
-    const minutes = Math.floor((diff / (1000 * 60)) % 60);
-    const seconds = Math.floor((diff / 1000) % 60);
+//     const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+//     const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+//     const minutes = Math.floor((diff / (1000 * 60)) % 60);
+//     const seconds = Math.floor((diff / 1000) % 60);
 
-    countdownElement.textContent = `Starts in: ${days}d ${hours}h ${minutes}m ${seconds}s`;
-}
+//     countdownElement.textContent = `Starts in: ${days}d ${hours}h ${minutes}m ${seconds}s`;
+// }
 
-if (countdownElement) {
-    updateCountdown(); // initial call
-    setInterval(updateCountdown, 1000); // update every second
-}
+// if (countdownElement) {
+//     updateCountdown(); // initial call
+//     setInterval(updateCountdown, 1000); // update every second
+// }
 
 
 
